@@ -38,14 +38,15 @@ I provide cutting-edge cybersecurity solutions, including:
 Highlighted projects include:
 1. **[Fraud Detection in e-Commerce](https://github.com/bnvaidya20/FraudDetection)**: Comprehensive analysis using machine learning classifiers for detecting fraudulent activities.
 2. **[Anomaly Detection on ECG](https://github.com/bnvaidya20/AnomalyDetection_ECG)**: Using autoencoders for identifying abnormal cardiac patterns.
-3. **[Cybersecurity for Connected and Autonomous Vehicles (CAVs)]**: Ensuring reliability and safety with IDS and adversarial ML defenses.
+3. **Cybersecurity for Connected and Autonomous Vehicles (CAVs)**: Ensuring reliability and safety with IDS and adversarial ML defenses.
 4. **[NLP Text Attack](https://github.com/bnvaidya20/NLP_TextAttack)**: Exploring data augmentation techniques using TextAttack.
-5. **[Vulnerability and Threat Assessment (VTA)]**: Conducted VTA for EV Charging Station Networks using industry standards like OWASP and NIST.
+5. **Vulnerability and Threat Assessment (VTA)**: Conducted VTA for EV Charging Station Networks using industry standards like OWASP and NIST.
 
 ---
 
 ## Certifications
 - **IBM Generative AI for Cybersecurity Professionals (2024)**.
+- **IBM AI Developer Professional Certificate, Coursera, (2024)**.
 - **Google Project Management Professional Certificate (2024)**.
 
 ---
