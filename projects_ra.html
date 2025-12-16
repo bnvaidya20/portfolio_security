@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlighted Projects for Research Associate</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #0c4a6e 0%, #075985 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+            margin-top: 5px;
+        }
+        
+        .researcher-title {
+            background-color: #0891b2;
+            color: white;
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 15px;
+            letter-spacing: 0.5px;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .project {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        .project:last-child {
+            border-bottom: none;
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: #0c4a6e;
+            margin-bottom: 5px;
+        }
+        
+        .project-number {
+            display: inline-block;
+            background-color: #0c4a6e;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+        
+        .github-link {
+            background-color: #333;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .github-link:hover {
+            background-color: #0891b2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            color: #075985;
+            margin: 20px 0 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        h4 {
+            font-size: 1.2rem;
+            color: #0ea5e9;
+            margin: 15px 0 8px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .feature-card {
+            background-color: #f8f9fa;
+            border-left: 4px solid #075985;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .highlight-box {
+            background-color: #f0f9ff;
+            border: 1px solid #bae6fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .comparison-table th {
+            background-color: #0c4a6e;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .comparison-table td {
+            padding: 12px;
+            border: 1px solid #eaeaea;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .tool-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .tool-item {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #eaeaea;
+        }
+        
+        .tool-item h4 {
+            margin-top: 0;
+        }
+        
+        .tag {
+            display: inline-block;
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .use-case-box {
+            background-color: #fffbeb;
+            border: 1px solid #fde68a;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .phase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .phase-card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 4px solid #0891b2;
+        }
+        
+        .phase-number {
+            background-color: #0891b2;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .module-card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .module-card h4 {
+            color: #075985;
+            border-bottom: 2px solid #0891b2;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .policy-box {
+            background-color: #eff6ff;
+            border-left: 5px solid #1d4ed8;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .project-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .github-link {
+                margin-top: 10px;
+            }
+            
+            .feature-grid, .tool-list, .phase-grid, .module-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #eaeaea;
+            margin-top: 30px;
+        }
+        
+        .executive-summary {
+            background-color: #f0f9ff;
+            border-left: 5px solid #0c4a6e;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+        
+        .executive-summary h3 {
+            border-bottom: none;
+            margin-top: 0;
+            color: #0c4a6e;
+        }
+        
+        .risk-levels {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .risk-level {
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .risk-critical {
+            background-color: #fef2f2;
+            color: #dc2626;
+            border: 2px solid #fecaca;
+        }
+        
+        .risk-high {
+            background-color: #fff7ed;
+            color: #ea580c;
+            border: 2px solid #fed7aa;
+        }
+        
+        .risk-elevated {
+            background-color: #fffbeb;
+            color: #d97706;
+            border: 2px solid #fde68a;
+        }
+        
+        .risk-moderate {
+            background-color: #f0f9ff;
+            color: #0284c7;
+            border: 2px solid #bae6fd;
+        }
+        
+        .risk-low {
+            background-color: #f0fdf4;
+            color: #16a34a;
+            border: 2px solid #bbf7d0;
+        }
+        
+        .kpi-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .kpi-table th {
+            background-color: #0c4a6e;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .kpi-table td {
+            padding: 12px;
+            border: 1px solid #eaeaea;
+        }
+        
+        .kpi-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Highlighted Projects for Research Associate</h1>
+            <p class="subtitle">Cyber Security Specialist & AI Expert</p>
+            <div class="researcher-title">Specializing in Research Security, Geospatial AI, and Smart Mobility Systems</div>
+        </header>
+        
+        <div class="content">
+            <!-- Project 3.1 -->
+            <div class="project" id="ra3.1">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">3.1</span>
+                        <h2>Comprehensive Partner Risk Screening Tool Using Streamlit</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/strac-risk-assessment-tool" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <div class="highlight-box">
+                    <h3>Introduction</h3>
+                    <p>Canada's research ecosystem is globally recognized for its excellence, openness, and collaborative spirit. However, this openness also introduces vulnerabilities, making it a potential target for foreign interference. The unauthorized transfer of knowledge — particularly in high-impact research areas such as artificial intelligence, quantum computing, and genetic engineering — can lead to the misuse of research for military or surveillance purposes. Such risks pose significant national security challenges for Canada and its international partners.</p>
+                    
+                    <p>In January 2024, the Government of Canada introduced the Policy on Sensitive Technology Research and Affiliations of Concern (STRAC), which outlines mandatory requirements for federally funded research projects. The policy prohibits funding where any named researcher is affiliated with or receives support from organizations identified as national security risks.</p>
+                    
+                    <p>This project explores a Comprehensive Partner Risk Screening Tool built with Streamlit that evaluates both organizational profiles and technology sensitivity to provide comprehensive risk assessments. This tool, implemented using Streamlit, allows research administrators and investigators to assess potential risks by referencing:</p>
+                    <ul>
+                        <li>Sensitive Technology Research Areas (STRA)</li>
+                        <li>Named Research Organizations (NRO)</li>
+                    </ul>
+                    <p>It acts as a decision-support mechanism to assist institutions in maintaining compliance with the federal policy.</p>
+                </div>
+                
+                <h3>Key Policy Links</h3>
+                <ul>
+                    <li>Policy on Sensitive Technology Research and Affiliations of Concern (STRAC)</li>
+                    <li>Sensitive Technology Research Areas List, January 2024</li>
+                    <li>Named Research Organizations List, January 2024</li>
+                </ul>
+                
+                <h3>Compliance Logic Used by the Tool</h3>
+                <p>This tool follows the compliance structure defined in the STRAC policy:</p>
+                <ul>
+                    <li>Determine if the research aims to advance any STRA-defined sensitive technologies.</li>
+                    <li>Verify whether any researcher is currently affiliated with, or receives any support (financial or in-kind), from an NRO.</li>
+                </ul>
+                <p>If both conditions are met, the research funding is likely to be ineligible.</p>
+                <p><em>Note: Past affiliations are not considered under this policy unless there is a continuing obligation or formal return agreement.</em></p>
+                
+                <h3>Risk Classification Scheme</h3>
+                <p>Risk categories in this tool are used for internal assessment purposes ONLY and do not reflect any official risk scale issued by the Government of Canada. The tool having five risk levels employs the following logic:</p>
+                
+                <div class="risk-levels">
+                    <div class="risk-level risk-critical">
+                        <h4>CRITICAL</h4>
+                        <p>Match with STRA and affiliation to critical-risk or high-risk NRO.</p>
+                    </div>
+                    
+                    <div class="risk-level risk-high">
+                        <h4>HIGH</h4>
+                        <p>Match with STRA and affiliation to medium-risk NRO.</p>
+                    </div>
+                    
+                    <div class="risk-level risk-elevated">
+                        <h4>ELEVATED</h4>
+                        <p>No STRA match but affiliation with critical-risk or high-risk NRO.</p>
+                    </div>
+                    
+                    <div class="risk-level risk-moderate">
+                        <h4>MODERATE</h4>
+                        <p>No STRA match but affiliation to medium-risk NRO or No NRO affiliation but match with STRA.</p>
+                    </div>
+                    
+                    <div class="risk-level risk-low">
+                        <h4>LOW</h4>
+                        <p>No STRA match or NRO affiliation detected.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3.2 -->
+            <div class="project" id="ra3.2">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">3.2</span>
+                        <h2>OSINT for Research Intelligence and International Collaboration</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/osint-research-initiatives" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <p>This repository contains two in-depth guides on applying the Open Source Intelligence (OSINT) Framework to enhance research intelligence and build high-impact international research partnerships, with a special emphasis on Canadian academic and research institutions.</p>
+                
+                <h3>Contents</h3>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>1. osint-research-intelligence.md</h4>
+                        <p><strong>Title:</strong> OSINT for Canadian Research Institutions: Enhancing Research Intelligence and Strategic Foresight</p>
+                        <p><strong>Focus:</strong> Strategic integration of OSINT into institutional research workflows.</p>
+                        <p><strong>Audience:</strong> Research managers, strategy teams, and compliance officers.</p>
+                        <p><strong>Highlights:</strong></p>
+                        <ul>
+                            <li>End-to-end OSINT workflow</li>
+                            <li>Use cases: benchmarking, funding, trend detection, risk monitoring</li>
+                            <li>Ethical guidelines and institutional impact areas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>2. osint-international-research-partner.md</h4>
+                        <p><strong>Title:</strong> Leveraging the OSINT Framework to Build Strategic International Research Partnerships</p>
+                        <p><strong>Focus:</strong> Using OSINT to scout, validate, and engage international partners in emerging technology domains.</p>
+                        <p><strong>Audience:</strong> Principal Investigators (PIs), internationalization officers, and grant developers.</p>
+                        <p><strong>Highlights:</strong></p>
+                        <ul>
+                            <li>Targeting South and Southeast Asia for academic partnerships</li>
+                            <li>Deep-dive on co-authorship, funding, and institutional validation</li>
+                            <li>Due diligence through reputational, compliance, and digital footprint analysis</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Use Cases</h3>
+                <p>These guides are especially useful for:</p>
+                <ul>
+                    <li>Building collaborative consortia under programs like NSERC Alliance International, Horizon Europe, or ASEAN Science Cooperation</li>
+                    <li>Performing partner due diligence and risk assessments</li>
+                    <li>Mapping global research trends and funding networks</li>
+                    <li>Enhancing institutional foresight and compliance workflows</li>
+                </ul>
+                
+                <h3>Technologies & Tools Covered</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Academic Databases</h4>
+                        <p>Google Scholar, OpenAlex, CORE, Dimensions</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Intelligence Tools</h4>
+                        <p>SpiderFoot, WHOIS, ExifTool, TinEye</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Research Profiling</h4>
+                        <p>ORCID, ResearchGate, LinkedIn</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Visualization</h4>
+                        <p>Tableau, Power BI, Gephi</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>OSINT Framework</h4>
+                        <p>https://osintframework.com</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>Ethics and Governance</h4>
+                    <p>Both documents emphasize compliance with GDPR, FOIPPA, and institutional privacy regulations, and recommend transparency, documentation, and ethical validation for all OSINT activities.</p>
+                </div>
+            </div>
+            
+            <!-- Project 3.3 -->
+            <div class="project" id="ra3.3">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">3.3</span>
+                        <h2>Site Suitability Assessment for Public EVCS</h2>
+                    </div>
+                    <div></div>
+                </div>
+                
+                <p>Designed a GIS-based MCDM model with ArcGIS Pro to optimize EV charging infrastructure, integrating population density, PoIs, and road networks. Developed an interactive web application.</p>
+            </div>
+            
+            <!-- Project 3.4 -->
+            <div class="project" id="ra3.4">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">3.4</span>
+                        <h2>Real Estate Analysis using AI/ML Models and ArcGIS Pro</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/real-estate-analysis" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <p>This project leverages AI/ML models and geospatial analysis to understand real estate trends, predict property prices, and identify spatial patterns in the housing market.</p>
+                
+                <h3>Predictive Analysis Using AI/ML Models</h3>
+                <h4>Overview</h4>
+                <p>The section leverages AI and machine learning techniques to analyze real estate data, predict property prices, and segment the housing market using clustering techniques. The goal is to build robust predictive models to assist in real estate investment decisions.</p>
+                
+                <h4>Features</h4>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Exploratory Data Analysis (EDA)</h4>
+                        <p>Identifies trends and patterns in real estate data.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Data Preprocessing</h4>
+                        <p>Handles missing values, feature scaling, and encoding.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Supervised Learning</h4>
+                        <p>Implements regression models for price prediction.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Unsupervised Learning</h4>
+                        <p>Uses clustering for market segmentation.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Model Evaluation</h4>
+                        <p>Assesses performance using MSE and R² score.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Hyperparameter Tuning</h4>
+                        <p>Optimizes models with GridSearchCV and cross-validation.</p>
+                    </div>
+                </div>
+                
+                <h4>Machine Learning Models</h4>
+                <ul>
+                    <li><strong>Regression Models:</strong> Linear Regression, K-Nearest Neighbors (KNN) Regression, Decision Tree Regression, Random Forest Regression, Gradient Boosting Regression, and AdaBoost Regression</li>
+                    <li><strong>Clustering Algorithms:</strong> K-Means, and DBSCAN</li>
+                </ul>
+                
+                <h3>Geospatial Analysis with ArcGIS Pro</h3>
+                <h4>Overview</h4>
+                <p>This section applies geospatial techniques to analyze real estate patterns in Boston using ArcGIS Pro. Techniques include Geographically Weighted Regression (GWR), Multiscale GWR (MGWR), hotspot analysis, DBSCAN clustering, and Kernel Density Estimation (KDE).</p>
+                
+                <h4>Analytical Methods</h4>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Geographically Weighted Regression (GWR)</h4>
+                        <p>Models housing prices considering spatial heterogeneity.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Multiscale Geographically Weighted Regression (MGWR)</h4>
+                        <p>Allows variable-specific bandwidths for improved performance.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Hotspot Analysis</h4>
+                        <p>Identifies statistically significant high/low real estate price clusters.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>DBSCAN Clustering</h4>
+                        <p>Groups properties based on spatial distribution.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Kernel Density Estimation (KDE)</h4>
+                        <p>Analyzes density variations in house sizes and prices.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3.5 -->
+            <div class="project" id="ra3.5">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">3.5</span>
+                        <h2>Site Suitability Analysis for Hospital Locations</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/site-suitability-analysis" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <p>This repository contains a site suitability analysis for hospital locations using raster data and weighted overlay techniques. The analysis integrates spatial datasets such as population density, hospital proximity, road accessibility, land use, and slope to determine the best locations for new hospitals.</p>
+                
+                <h3>Objectives</h3>
+                <p>Identify the most suitable locations for hospitals using GIS-based analysis.</p>
+                <p>Process raster datasets exported from ArcGIS Pro.</p>
+                <p>Apply weighted overlay methods to compute suitability scores.</p>
+                
+                <h3>Methodology</h3>
+                <p>The analysis follows a structured GIS-based approach:</p>
+                
+                <div class="phase-grid">
+                    <div class="phase-card">
+                        <div class="phase-number">1</div>
+                        <h4>Step 1: Prepare the Data</h4>
+                        <ul>
+                            <li>Load raster datasets related to suitability factors.</li>
+                            <li>Use Python libraries such as rasterio, numpy, and pandas for data handling.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">2</div>
+                        <h4>Step 2: Define Weighted Overlay Function</h4>
+                        <p>Create a function that computes a suitability index based on weighted criteria.</p>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">3</div>
+                        <h4>Step 3: Compute Suitability Scores</h4>
+                        <p>Combine multiple raster datasets using weighted overlay analysis.</p>
+                        <p>Normalize and rescale values to ensure comparability.</p>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">4</div>
+                        <h4>Step 4: Visualize Results</h4>
+                        <p>Generate visual representations of suitability scores and optimal locations.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3.6 -->
+            <div class="project" id="ra3.6">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">3.6</span>
+                        <h2>Ensuring Data Integrity: A Comprehensive Data Governance Framework</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/data-governance-framework" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <h3>Overview</h3>
+                <p>This project demonstrates the implementation of Data Governance practices using Python and Great Expectations. It focuses on ensuring the quality, validation, and integrity of datasets through the application of various expectations and validation rules.</p>
+                
+                <p>The project is divided into multiple components:</p>
+                <ul>
+                    <li><strong>Data Quality Verification:</strong> This component ensures that data meets specific validation expectations, such as non-null values, valid types, and value ranges.</li>
+                    <li><strong>Metadata Management:</strong> A separate module is used to manage and handle metadata for different data assets, improving visibility and traceability.</li>
+                    <li><strong>Data Validation:</strong> Uses Great Expectations to define and enforce expectations on data, running validation checks to ensure data integrity and correctness.</li>
+                </ul>
+                
+                <h3>Project Structure</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>data_quality_verify.ipynb</h4>
+                        <p>Jupyter notebook for performing data quality verification tasks.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>metadata_management.ipynb</h4>
+                        <p>Jupyter notebook that outlines metadata management processes, helping track and manage data provenance.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>data_validation_gx.py</h4>
+                        <p>Python script implementing the data validation pipeline using Great Expectations. It ensures that the dataset adheres to a series of predefined expectations for validation.</p>
+                    </div>
+                </div>
+                
+                <h3>Requirements</h3>
+                <p>This project requires Python and the following libraries:</p>
+                <ul>
+                    <li>pandas: For data manipulation and analysis.</li>
+                    <li>numpy: For scientific computing.</li>
+                    <li>datetime: For manipulating date and time.</li>
+                    <li>logging: For logging information, errors, & warnings.</li>
+                    <li>great_expectations: For defining and running data validation checks.</li>
+                </ul>
+                <p>To install these libraries, run:</p>
+                <div class="highlight-box">
+                    <code>pip install pandas numpy great_expectations</code>
+                </div>
+                
+                <h3>Scripts Breakdown</h3>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>1. data_quality_verify.ipynb</h4>
+                        <p>This Jupyter notebook is designed for data quality verification. It allows the user to load a dataset and run a set of quality checks to ensure that the data is accurate, complete, and conforms to the expected standards.</p>
+                        <p><strong>Key Features:</strong></p>
+                        <ul>
+                            <li>Load data using pandas.</li>
+                            <li>Perform validation of data based on predefined rules.</li>
+                            <li>Display reports on data quality issues.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>2. metadata_management.ipynb</h4>
+                        <p>The metadata_management.ipynb focuses on metadata-related tasks, ensuring that each dataset is well-documented and its provenance is tracked. It helps in managing metadata to keep track of dataset schema, data source, and data types.</p>
+                        <p><strong>Key Features:</strong></p>
+                        <ul>
+                            <li>Load and view metadata.</li>
+                            <li>Manage data source information.</li>
+                            <li>Display dataset details, including column types and missing values.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>3. data_validation_gx.py</h4>
+                        <p>This Python script leverages Great Expectations to validate data based on defined expectations.</p>
+                        <p><strong>Key Features:</strong></p>
+                        <ul>
+                            <li><strong>Initialization:</strong> Initializes a Great Expectations context and loads data.</li>
+                            <li><strong>Expectation Suite:</strong> Defines various validation checks (expectations) such as:
+                                <ul>
+                                    <li>Ensuring non-null values in specific columns.</li>
+                                    <li>Checking value ranges for numeric columns.</li>
+                                    <li>Validating categorical values.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Checkpointing:</strong> Runs the validation against the dataset and provides a report with results.</li>
+                            <li><strong>Result Review:</strong> Detailed review of validation results, including why any checks failed.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Workflow</h3>
+                <ol>
+                    <li><strong>Load Data:</strong> Load a CSV file into a pandas DataFrame.</li>
+                    <li><strong>Initialize Great Expectations:</strong> Set up a Great Expectations context.</li>
+                    <li><strong>Define Expectations:</strong> Create expectations to validate the data against certain rules.</li>
+                    <li><strong>Run Checkpoints:</strong> Run a checkpoint to validate the dataset against the expectations suite.</li>
+                    <li><strong>Review Results:</strong> Review the results to check if the dataset meets all expectations and address any validation failures.</li>
+                </ol>
+            </div>
+            
+            <!-- Project 3.7 -->
+            <div class="project" id="ra3.7">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">3.7</span>
+                        <h2>Geospatial Analysis Using QGIS for Threat Assessment and Incident Response</h2>
+                    </div>
+                    <div></div>
+                </div>
+                
+                <div class="executive-summary">
+                    <p>The <strong>Geospatial Analysis Using QGIS</strong> project presents a comprehensive, end-to-end framework for implementing a <strong>Geospatial Threat Intelligence and Incident Response System</strong>. Built entirely on open-source technologies, it integrates data science, spatial analytics, and geovisualization to enable real-time situational awareness, strategic decision-making, and operational optimization for security-focused environments.</p>
+                    
+                    <p>The project is organized into six structured modules, each contributing to the development of a fully operational geospatial intelligence platform.</p>
+                </div>
+                
+                <div class="module-grid">
+                    <div class="module-card">
+                        <h4>Module 1: Foundation & Data Generation</h4>
+                        <p>Establishes the foundation by generating synthetic datasets—including threat actor locations, security incidents, critical infrastructure, and resource units—using Python with pandas and geopandas. These datasets, standardized to the WGS84 (EPSG:4326) coordinate system, provide realistic inputs for subsequent spatial analyses within QGIS.</p>
+                    </div>
+                    
+                    <div class="module-card">
+                        <h4>Module 2: Data Ingestion & Layer Creation</h4>
+                        <p>Focuses on <strong>data ingestion and layer creation</strong> within QGIS. Each dataset is imported as a vector or delimited text layer, styled by attributes such as risk level or severity, and symbolized using categorical color schemes. This stage ensures coherent data visualization, facilitating a clear spatial understanding of threats, incidents, and available resources.</p>
+                    </div>
+                    
+                    <div class="module-card">
+                        <h4>Module 3: Temporal Visualization & Heatmaps</h4>
+                        <p>Advances the analysis through <strong>temporal visualization and heatmap generation</strong>. By leveraging the TimeManager and Heatmap plugins, the project enables temporal animation of incident data and kernel density estimation for identifying geographic hotspots. Optional clustering using DBSCAN enhances analytical depth by revealing hidden spatial patterns of threat concentration.</p>
+                    </div>
+                    
+                    <div class="module-card">
+                        <h4>Module 4: Proximity & Optimization Analysis</h4>
+                        <p>Shifts focus to <strong>proximity and optimization analysis</strong>. Spatial buffers are generated around high-risk threat actors, and spatial joins identify critical infrastructures within these risk zones. Combined with resource location data, QGIS-based service area and gap analyses provide a foundation for strategic resource deployment, highlighting areas of under-coverage and priority risk zones.</p>
+                    </div>
+                    
+                    <div class="module-card">
+                        <h4>Module 5: Report Automation & Dashboarding</h4>
+                        <p>Introduces <strong>report automation and dashboarding</strong> using QGIS Atlas and DataPlotly. Automated incident reports, interactive dashboards, and dynamic charts consolidate all spatial outputs into actionable intelligence products, supporting executive-level briefings and research security applications.</p>
+                    </div>
+                    
+                    <div class="module-card">
+                        <h4>Module 6: System Architecture & Deployment</h4>
+                        <p>Documents the <strong>system architecture and deployment pipeline</strong>, illustrating a fully modular, scalable, and production-ready ecosystem. The final deliverables include Python-based data generation scripts, QGIS project files, heatmaps, proximity maps, and an architectural diagram, all designed for institutional, research, and operational use.</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>Project Impact</h4>
+                    <p>This project exemplifies how open-source geospatial technologies can operationalize threat intelligence—transforming static data into dynamic, interactive intelligence systems that enhance <strong>research security, executive protection, and incident response capabilities</strong>.</p>
+                </div>
+            </div>
+            
+            <!-- Project 3.8 -->
+            <div class="project" id="ra3.8">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">3.8</span>
+                        <h2>Electricity Demand Prediction</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/Electricity_Demand_Forecasting" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <p>Time series analysis can be used to better understand the characteristics of electricity demand and forecast usage patterns. In this project, time series analysis is used to uncover hidden relationships in electricity production data, predict future demand, and identify trends. Pandas, ARIMA, and SARIMAX in Python have been used to perform the time series analysis and predict the future.</p>
+            </div>
+            
+            <!-- Project 3.9 -->
+            <div class="project" id="ra3.9">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">3.9</span>
+                        <h2>Personalized DR Recommendation System</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/PersonalizedDRRecommendations" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <p>This project implements a Personalized Demand Response (DR) Recommendation System aimed at optimizing energy consumption and enhancing user engagement with demand response programs. The system leverages advanced machine learning models and data analytics to provide tailored DR recommendations to individual households or entities.</p>
+                
+                <div class="use-case-box">
+                    <h4>Use Case</h4>
+                    <p>ML algorithms can analyze individual energy consumption patterns to provide personalized recommendations for energy reduction during DR events.</p>
+                    <p><strong>Benefits:</strong> Tailored recommendations can improve participant engagement by showing them the most effective ways to reduce their energy usage, based on their habits and the devices they use.</p>
+                </div>
+                
+                <h3>Features</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Data Loading & Preprocessing</h4>
+                        <p>Comprehensive data handling including exploratory data analysis (EDA).</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Hyperparameter Tuning</h4>
+                        <p>Model optimization through systematic parameter search.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Predictive Models</h4>
+                        <p>Implementation of advanced machine learning models for prediction.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>DR Recommendations</h4>
+                        <p>Personalized demand response suggestions based on user behavior.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Visualization Tools</h4>
+                        <p>Interactive tools for data and prediction insights visualization.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3.10 -->
+            <div class="project" id="ra3.10">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">3.10</span>
+                        <h2>Day Ahead Electricity Price Prediction</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/DayAheadElectricity" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <p>This repository contains a series of Python scripts for exploratory data analysis (EDA), feature engineering, and predictive modeling of day-ahead (DAH) electricity prices. The scripts are designed to load, preprocess, visualize, and analyze electricity price data, as well as to build and evaluate predictive models using machine learning techniques, including Random Forest, XGBoost, and LSTM.</p>
+                
+                <h3>Features</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Data Loading & Preprocessing</h4>
+                        <p>Utilities for loading and preparing electricity price data.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Exploratory Data Analysis</h4>
+                        <p>Comprehensive EDA with visualizations for pattern discovery.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Feature Engineering</h4>
+                        <p>Preparation of features for machine learning readiness.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Model Implementation</h4>
+                        <p>Implementation and evaluation of Random Forest and XGBoost models.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Time Series Forecasting</h4>
+                        <p>LSTM neural network for time series forecasting.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3.11 -->
+            <div class="project" id="ra3.11">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">3.11</span>
+                        <h2>Secure Electric Vehicle Ecosystem for Smart Grid (SecCharge System)</h2>
+                    </div>
+                    <div></div>
+                </div>
+                
+                <div class="executive-summary">
+                    <h3>Executive Overview</h3>
+                    <p><strong>SecCharge: Secure Electric Vehicle Ecosystem for Smart Grid</strong> is a secure, multi-tier electric-mobility platform that enables end-to-end EV charging services—from user onboarding and reservations to authorization, charging session orchestration, metering, billing, and third-party settlement. The platform evolved through several iterations (2014–2017), with the Improved SecCharge System (2017) strengthening the architecture around a Spring-based Application Server, JWT-secured APIs, Angular single-page web client, Android mobile clients (including an embedded AEV client), and a Control Center (CC) implementing Open Charge Point Protocol (OCPP) for wired and wireless charging stations (CS/WCS).</p>
+                </div>
+                
+                <h3>1. System Architecture (Priority: Improved SecCharge System)</h3>
+                
+                <h4>1.1 High-Level Topology (2017)</h4>
+                <p>The Improved SecCharge architecture organizes the platform into the following components, interacting primarily via REST over HTTP(S):</p>
+                <ul>
+                    <li><strong>Web App (Angular SPA):</strong> Single-page application for participating users (search, reservation, charging control, trip planning) and service-provider functions (manage sites/stations). End-to-end testing leverages Protractor.</li>
+                    <li><strong>Android Mobile App:</strong> Parity with the web app for participating users.</li>
+                    <li><strong>AEV Android App:</strong> Embedded in the vehicle (on a Raspberry Pi for demo). Monitors the vehicle State-of-Charge (SoC) and proactively reserves a station when the SoC drops below a critical threshold; not distributed to end users.</li>
+                    <li><strong>Application Server (Spring Boot):</strong> The transactional heart of SecCharge. Exposes REST APIs to clients and backend services. Responsible for all database CRUD, enforces endpoint security, and applies JWT-based stateless authentication/authorization.</li>
+                    <li><strong>Authentication Server (EV Only):</strong> Validates EV contract certificates sent by CS via CC and App Server; only authenticated EVs can start charging.</li>
+                    <li><strong>Control Center (CC):</strong> Manages protocol exchanges with Charging Stations (CS) and Wireless Charging Stations (WCS) using OCPP; forwards telemetry such as SoC and executes remote start/stop transactions.</li>
+                    <li><strong>CS/WCS (Raspberry Pi):</strong> Field gateways executing port control, local authorization, and periodic telemetry. On EV connection, the station sends the EV authentication certificate (for EVs) and SoC readings.</li>
+                    <li><strong>Database Server:</strong> Durable storage for users, assets (provider/site/station/ports), reservations, prices, and session/transaction/billing artifacts.</li>
+                </ul>
+                
+                <h4>1.2 Security Model</h4>
+                <p>SecCharge's defense-in-depth is layered as follows:</p>
+                <ul>
+                    <li><strong>Transport Security:</strong> HTTP(S) for client–server; HTTPS with SSL/TLS for third-party payment integrations.</li>
+                    <li><strong>API Security:</strong> Spring Security guards endpoints; per-endpoint authorization via ant-matchers; JWT (JSON Web Token) conveys authenticated identity, roles, and claims for stateless, horizontally scalable sessions.</li>
+                    <li><strong>Error Handling:</strong> Centralized @RestControllerAdvice-based exception handling provides consistent client feedback.</li>
+                    <li><strong>Credential Hygiene:</strong> BCrypt (adaptive, slow hashing) hardens password storage against brute-force attacks.</li>
+                    <li><strong>Identity & Certificates (EV):</strong> For EV-side identification, SecCharge adopts ISO/IEC 15118's V2G PKI model: EVs receive contract certificates from an issuing CA.</li>
+                </ul>
+                
+                <h3>2. System Implementation (Priority: Improved SecCharge System)</h3>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>2.1 Application Server (Spring Boot)</h4>
+                        <ul>
+                            <li>CORS Policies: Configured to permit approved origins for web/mobile front ends</li>
+                            <li>Swagger/OpenAPI: Auto-documents REST endpoints</li>
+                            <li>Endpoint Security: Custom HttpSecurity config secures sensitive routes</li>
+                            <li>JWT Auth Flow: Stateless authentication with bearer tokens</li>
+                            <li>Reservation APIs: Search CSSs within a radius with optional filters</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>2.2 Control Center (OCPP) and Station Integration</h4>
+                        <p>OCPP Operations implemented/benchmarked against Syntronic charging stations include Authorize, StartTransaction, StopTransaction, MeterValues, Heartbeat, and BootNotification.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>2.3 Trip/Route Planning</h4>
+                        <p>Trip planning combines Google Directions alternatives with SoC-aware critical points detection.</p>
+                    </div>
+                </div>
+                
+                <h3>3. Representative Use Cases</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>3.1 Mobile & Web</h4>
+                        <ul>
+                            <li>UC-1.1 Login: Role-based entry point with lockout after repeated failures</li>
+                            <li>UC-1.2 Find a Charging Station: Triggered by low SoC or by user intent</li>
+                            <li>Start/Cancel Charging: After reservation and pre-authorization</li>
+                            <li>Trip Planning: Enter origin/destination, review recommended routes</li>
+                            <li>Manage Payments: Add/edit/delete third-party accounts</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>3.2 Administrative</h4>
+                        <ul>
+                            <li>SecCharge Administrator (SA): Add/modify/delete user accounts; reset passwords; audit actions</li>
+                            <li>Charging Station Administrator (CSA): Commission/decommission stations; update site/station metadata</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>3.3 EV/AEV Automations</h4>
+                        <ul>
+                            <li>AEV SoC-Driven Reservation: Embedded client monitors SoC and auto-reserves when below threshold</li>
+                            <li>EV Plug-and-Charge: EV presents contract certificate; station/CC/App/Authentication Server coordinate certificate validation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3.12 -->
+            <div class="project" id="ra3.12">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">3.12</span>
+                        <h2>AI-Driven EV Charging Management System</h2>
+                    </div>
+                    <div></div>
+                </div>
+                
+                <div class="executive-summary">
+                    <h3>Introduction</h3>
+                    <p>The rapid adoption of electric vehicles (EVs) has created new challenges in managing charging infrastructure efficiently and sustainably. Traditional charging management systems often rely on static scheduling, limited user interaction, and manual oversight. To address these gaps, the AI-driven EV Charging Management System (EV-CMS) was designed and implemented.</p>
+                    
+                    <p>It fuses predictive analytics, optimization, and IoT-enabled emulation to orchestrate reservations, pricing, and charger control with measurable gains in utilization, waiting time, and operating cost.</p>
+                    
+                    <p>This system comprises three major components:</p>
+                    <ol>
+                        <li><strong>Backend Infrastructure</strong> — Application and database servers responsible for reservations, scheduling, and optimization.</li>
+                        <li><strong>Frontend Applications</strong> — Web and mobile apps that provide user-friendly interfaces for reservations, monitoring, and billing.</li>
+                        <li><strong>Hardware Emulation Layer</strong> — Raspberry Pi-based EV Charging Station (EVCS) emulator, Jetson Nano for self-driving vehicle navigation, and static wireless charging emulation.</li>
+                    </ol>
+                </div>
+                
+                <h3>Core Features</h3>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Slot-Based Reservations</h4>
+                        <ul>
+                            <li>Supports a minimum of 15-minute slots for Level 3 (DC fast charging) and 30-minute slots for Level 2 (AC charging)</li>
+                            <li>Users can reserve charging sessions in advance through the app</li>
+                            <li>Enforces alignment to slot boundaries, configurable grace periods, and no-show handling</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>AI-Powered Optimization</h4>
+                        <ul>
+                            <li><strong>Demand Forecasting:</strong> Uses time-series models and machine learning (XGBoost, LSTM) to predict charger demand</li>
+                            <li><strong>Scheduling:</strong> Applies mixed-integer programming (MIP/CP-SAT) to assign slots fairly and minimize waiting times</li>
+                            <li><strong>Dynamic Pricing:</strong> Reinforcement learning adjusts tariffs based on demand, occupancy, and grid constraints</li>
+                            <li><strong>Anomaly & Faults:</strong> Monitors charger telemetry for faults, abnormal energy consumption, and cyber anomalies</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Hardware Integration</h4>
+                        <ul>
+                            <li><strong>Raspberry Pi EVCS Emulator:</strong> Simulates charger behavior using OCPP-like communication</li>
+                            <li><strong>Self-Driving Demo:</strong> A scaled vehicle equipped with Jetson Nano, camera, ultrasonic sensors autonomously navigates to its reserved charging bay</li>
+                            <li><strong>Wireless Static Charging Emulation:</strong> Models charging efficiency based on pad alignment and vehicle positioning</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>System Architecture</h3>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Backend</h4>
+                        <ul>
+                            <li>API Gateway: REST/gRPC for apps and devices; JWT for apps, optional mTLS for devices</li>
+                            <li>Scheduling Engine: Rolling-horizon optimizer with greedy warm-start</li>
+                            <li>Data Layer: PostgreSQL + TimescaleDB for sessions & telemetry; Redis cache</li>
+                            <li>AI Services: Forecasting, dynamic pricing, anomaly detection, and fault prediction</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Frontend</h4>
+                        <ul>
+                            <li>Web App: Booking, status, and administration (React)</li>
+                            <li>Mobile App: Reservations, alerts, navigation to bay, push notifications</li>
+                            <li>Admin Console: Site power caps, tariffs, DR events, alerts triage</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Hardware/Edge</h4>
+                        <ul>
+                            <li>Raspberry Pi: EVCS state machine; MeterValues, StatusNotification</li>
+                            <li>Jetson Nano: Visual servoing for bay/pad alignment; ultrasonic for near-field safety</li>
+                            <li>Sensors: Camera + ultrasonic; optional current/temperature for richer emulation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Demonstration & Use Cases</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>EV Owner</h4>
+                        <p>A driver reserves a multiple of 30-minute Level 2 slot, navigates to the station, and monitors charging progress in the app.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Self-Driving Vehicle Demo</h4>
+                        <p>A Jetson-powered miniature Autonomous Electric Vehicle (AEV) automatically drives to its assigned bay, aligns with a wireless charging pad, and begins charging.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Operator Dashboard</h4>
+                        <p>An admin monitors live charger occupancy, demand forecasts, and anomaly alerts, while adjusting site limits during a simulated demand-response event.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3.13 -->
+            <div class="project" id="ra3.13">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">3.13</span>
+                        <h2>Autonomous EV Ride-Hailing System</h2>
+                    </div>
+                    <div></div>
+                </div>
+                
+                <div class="executive-summary">
+                    <h3>Executive Summary: Autonomous EV Ride-Hailing System</h3>
+                    <h4>Project Overview</h4>
+                    <p>This document presents a design and implementation plan for an Autonomous Electric Vehicle (AEV) Ride-Hailing System. The primary objective is to develop a functional prototype that integrates core ride-hailing functionalities with the unique requirements of autonomous electric vehicles, covering the complete mobility-energy loop. Built on scalable, efficient, privacy-conscious cloud-native technologies, it leverages advanced algorithms for real-time fleet management.</p>
+                    
+                    <p><strong>Key Differentiator:</strong> The system supports two dispatching approaches: a baseline Greedy algorithm and a more advanced, recommended Rolling-Horizon Min-Cost Flow (RH-MCF) algorithm for improved efficiency and robustness under load.</p>
+                    
+                    <p><strong>RH-MCF algorithm outperforms traditional greedy approaches by 10-20% in efficiency metrics</strong> while maintaining real-time performance through micro-batching and warm-start optimization.</p>
+                </div>
+                
+                <h3>Core System Components & Architecture</h3>
+                <p>The system is built using a microservices architecture for scalability and maintainability, orchestrated on Kubernetes. It comprises several key modules:</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Customer Applications</h4>
+                        <p>Web portal and mobile app (React/React Native) for users to plan, book, and track rides.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Core Platform Services</h4>
+                        <p>A suite of backend microservices handling user management, trip lifecycle, AEV fleet orchestration, reservations, payments, notifications, telemetry, and security.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Data Layer</h4>
+                        <p>Utilizes a hybrid approach with SQL databases (e.g., PostgreSQL) for structured data and NoSQL (e.g., MongoDB) for high-volume telemetry and status updates.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Fleet Orchestration (ATMDM)</h4>
+                        <p>The core AEV Management Module handles real-time vehicle status ingestion, information management, greedy or RH-MCF dispatch logic, maintenance/charging coordination, and route planning.</p>
+                    </div>
+                </div>
+                
+                <h3>Advanced Features & Technologies</h3>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Description</th>
+                            <th>Benefit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>RH-MCF Dispatch</strong></td>
+                            <td>Min-cost flow optimization with micro-batching</td>
+                            <td>10-20% lower empty miles, better SLA compliance</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Federated Learning</strong></td>
+                            <td>Privacy-preserving model training on-device</td>
+                            <td>Improved predictions without centralizing sensitive data</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Autonomous Charging</strong></td>
+                            <td>Seamless integration with charging networks</td>
+                            <td>Reduced operational downtime, energy optimization</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Multi-factor Verification</strong></td>
+                            <td>QR/BLE/on-device face matching for pickup</td>
+                            <td>Enhanced security while preserving privacy</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Expected Outcomes & KPIs</h3>
+                <p>The system aims to deliver a superior ride-hailing experience with key performance indicators focused on:</p>
+                
+                <table class="kpi-table">
+                    <thead>
+                        <tr>
+                            <th>KPI Category</th>
+                            <th>Expected Improvement</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>RH-MCF Efficiency</strong></td>
+                            <td>Reduce empty miles by 10-20%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pickup ETA</strong></td>
+                            <td>Average pickup ETA improved by 8-15% at moderate load</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SLA Compliance</strong></td>
+                            <td>Significantly decrease SLA breaches (by 20-30%)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Charging Queue Management</strong></td>
+                            <td>Reduce charging queue penalties (by 10-25%) under high load</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Project 3.14 -->
+            <div class="project" id="ra3.14">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">3.14</span>
+                        <h2>AI Cybersecurity for Connected and Autonomous Vehicles (CAVs)</h2>
+                    </div>
+                    <div></div>
+                </div>
+                
+                <p>This project deals cybersecurity measures, including Intrusion Detection Systems (IDS) and resilience against adversarial machine learning attacks, to ensure the safety and reliability of CAV applications.</p>
+            </div>
+            
+            <!-- Project 3.15 -->
+            <div class="project" id="ra3.15">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">3.15</span>
+                        <h2>Blockchain Platform for EV Charging</h2>
+                    </div>
+                    <div></div>
+                </div>
+                
+                <p>This project is about a blockchain-based platform for peer-to-peer energy transactions, optimizing energy management and facilitating secure, transparent energy exchanges.</p>
+            </div>
+            
+            <!-- Project 3.16 -->
+            <div class="project" id="ra3.16">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">3.16</span>
+                        <h2>Algorithmic Trading Energy</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/AlgorithmicTradingEnergy" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <p>This repository is dedicated to exploring algorithmic trading strategies within the energy sector.</p>
+                
+                <p>Algorithmic trading, also known as automated trading or algo-trading, involves using computer programs that execute trades based on predefined algorithms. These algorithms dictate when to buy or sell assets, aiming to generate profits at speeds and volumes unattainable by human traders.</p>
+                
+                <p>Utilizing historical stock data, the project applies Simple Moving Average (SMA) trading strategies to analyze and predict stock performances of major energy companies.</p>
+                
+                <h3>Project Highlights</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Data Source</h4>
+                        <p>Leverages the Alpha Vantage API for fetching real-time and historical stock data.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Stock Analysis</h4>
+                        <p>Analyzes stock data focusing on the energy sector, including major companies like Exxon Mobil (XOM), Chevron (CVX), and more.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Trading Strategy</h4>
+                        <p>Implements and evaluates Simple Moving Average (SMA) trading strategies.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Backtesting</h4>
+                        <p>Employs backtesting to assess the efficacy of trading strategies over time.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Visualization</h4>
+                        <p>Offers comprehensive visualization tools to plot stock performances, SMAs, and trading signals.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3.17 -->
+            <div class="project" id="ra3.17">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">3.17</span>
+                        <h2>EV User Segmentation</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/EVUser_Segmentation" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <p>This project delves into the analysis of electric vehicle (EV) charging sessions, utilizing high-resolution data to understand EV user behavior and segment users based on their charging patterns. By employing various data analysis and machine learning techniques, this study aims to provide insights into the diverse needs and preferences of EV users, particularly within a workplace charging context.</p>
+                
+                <h3>Analysis Methodology</h3>
+                <p>The analysis methodology encompasses a thorough examination of the EV charging data, focusing on identifying patterns and trends in EV charging behavior. Key aspects such as charging duration, charging cost, total energy consumption, and start time are scrutinized to draw meaningful conclusions about user preferences and charging habits.</p>
+                
+                <h3>Analysis Steps</h3>
+                <div class="phase-grid">
+                    <div class="phase-card">
+                        <div class="phase-number">1</div>
+                        <h4>Data Preprocessing</h4>
+                        <p>Cleaning and preparing the data for analysis, including handling outliers.</p>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">2</div>
+                        <h4>Exploratory Data Analysis (EDA)</h4>
+                        <p>Conducting an initial exploration to understand the dataset's characteristics and identify significant variables.</p>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">3</div>
+                        <h4>Principal Component Analysis (PCA)</h4>
+                        <p>Applying PCA to reduce the dimensionality of the data, capturing the most important information in fewer dimensions.</p>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">4</div>
+                        <h4>Clustering Techniques</h4>
+                        <p>Strategic application of various clustering techniques including K-means clustering, Agglomerative clustering, DBSCAN clustering, and Gaussian Mixture Model clustering to segment the user base.</p>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">5</div>
+                        <h4>User Segmentation</h4>
+                        <p>Applying clustering techniques like K-means and RFM analysis to segment EV users based on various attributes.</p>
+                    </div>
+                </div>
+            </div>
+                     
+            <!-- Project 3.18 -->
+            <div class="project" id="ra3.18">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">3.18</span>
+                        <h2>AI and Quantum-Inspired Approaches for Enhancing Security in the Internet of Military Defense Things</h2>
+                    </div>
+                    <div></div>
+                </div>
+                
+                <div class="executive-summary">
+                    <p>The Internet of Military Defense Things (IoMDT) represents a transformative shift in modern defense operations, integrating heterogeneous platforms—including UAVs, UUVs, USVs, autonomous robots, and distributed sensor networks—into a unified, data-driven ecosystem. This interconnected architecture enhances situational awareness, enables autonomous decision-making, and supports coordinated multi-domain operations across land, air, sea, and cyber environments.</p>
+                    
+                    <p>However, the same characteristics that make IoMDT operationally powerful—scale, heterogeneity, real-time data exchange, and deployment in hostile environments—also introduce significant security challenges. IoMDT systems are highly susceptible to cyberattacks, spoofing, data manipulation, stealthy intrusions, and anomalous operational behaviors that traditional rule-based or signature-driven security mechanisms cannot reliably detect.</p>
+                </div>
+                
+                <p>This paper addresses these challenges by proposing advanced AI-driven and Quantum-Inspired Machine Learning (QIML) approaches to enhance real-time threat detection and security resilience in IoMDT networks. The work focuses on anomaly detection as a core defensive capability, recognizing that many modern military cyber and cyber-physical attacks manifest as subtle deviations from normal behavior rather than known attack signatures.</p>
+                
+                <h3>Key Contribution: Hybrid VGAE-IF Model</h3>
+                <p>A key contribution is the proposed <strong>Hybrid Variational Graph Autoencoder with Isolation Forest (Hybrid VGAE-IF)</strong> model. By modeling IoMDT systems as graphs—where nodes represent devices and edges represent communication or interaction patterns—the approach captures relational intelligence that is often missed by conventional anomaly detection methods.</p>
+                
+                <p>The Variational Graph Autoencoder learns latent representations of normal network behavior, while the Isolation Forest component isolates statistical outliers in the learned embedding space. This hybrid design allows the system to detect both structural anomalies (e.g., abnormal communication patterns or coordination failures) and feature-level anomalies (e.g., unexpected sensor readings).</p>
+                
+                <h3>Quantum-Inspired Machine Learning (QIML)</h3>
+                <p>In parallel, the paper explores <strong>Quantum-Inspired Machine Learning (QIML)</strong> techniques—including Quantum-Inspired Support Vector Machines (QSVM), Quantum-Inspired Random Forests (QRF), and Quantum Neural Networks (QNN)—to address the challenges of high-dimensional, large-scale IoMDT data. These methods leverage quantum-inspired feature mappings and kernel transformations to improve pattern separation and learning efficiency without requiring quantum hardware.</p>
+                
+                <div class="highlight-box">
+                    <h4>Overall Impact</h4>
+                    <p>Overall, the paper demonstrates that combining graph-based deep learning with quantum-inspired models provides a robust, scalable, and forward-looking security framework for IoMDT. These approaches enable adaptive, unsupervised, and real-time threat detection, significantly enhancing the resilience, autonomy, and operational reliability of military IoT systems in contested environments.</p>
+                </div>
+            </div>
+            
+            <!-- Project 3.19 -->
+            <div class="project" id="ra3.19">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">3.19</span>
+                        <h2>Optimizing Bikesharing with Quantum-Inspired Techniques: Demand Prediction and Fleet Rebalancing</h2>
+                    </div>
+                    <div></div>
+                </div>
+                
+                <p>This work presents a comprehensive, quantum-inspired optimization framework aimed at improving the operational efficiency of urban bikesharing systems through enhanced demand prediction and optimized fleet rebalancing. Bikesharing has become a critical component of sustainable urban mobility, yet operators consistently face challenges such as spatial–temporal demand imbalance, bike shortages at high-demand stations, and surplus inventory at low-demand locations. Traditional forecasting and optimization approaches often struggle with the nonlinear, dynamic, and data-intensive nature of these systems.</p>
+                
+                <h3>Quantum-Inspired Approach</h3>
+                <p>To address these challenges, the study introduces <strong>quantum-inspired machine learning and optimization techniques</strong>, which adapt principles from quantum mechanics—such as superposition, tunneling, and high-dimensional state representation—for use on classical computing platforms. The objective is twofold: accurately predict bikesharing demand and compute efficient bike redistribution strategies that minimize imbalance and operational cost while improving user satisfaction.</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Demand Prediction with QINN</h4>
+                        <p>For <strong>demand prediction</strong>, the framework employs a Quantum-Inspired Neural Network (QINN). Unlike conventional neural networks, the QINN integrates adaptive learning rates influenced by quantum-inspired gradient dynamics, enabling the model to escape local minima more effectively.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Fleet Rebalancing Optimization</h4>
+                        <p>For <strong>fleet rebalancing</strong>, the study formulates bike redistribution as an optimization problem that minimizes the imbalance between predicted demand and actual bike availability across stations. Quantum-inspired optimization methods—such as simulated annealing-like dynamics and gradient-based solvers—are applied to identify efficient redistribution strategies under realistic constraints.</p>
+                    </div>
+                </div>
+                
+                <h3>Implementation & Evaluation</h3>
+                <p>The framework is implemented and evaluated using the <strong>SF Bay Area Bikeshare dataset</strong>, which integrates trip records, station metadata, and weather information. Empirical results demonstrate that quantum-inspired demand prediction achieves higher forecasting accuracy than traditional baselines, while the rebalancing optimization substantially reduces supply–demand mismatch.</p>
+                
+                <div class="highlight-box">
+                    <h4>Conclusion</h4>
+                    <p>Overall, this study demonstrates that <strong>quantum-inspired techniques offer a powerful and scalable alternative</strong> for managing complex urban mobility systems. While acknowledging computational complexity and assumptions of stationarity as limitations, the work highlights strong potential for extension to real-time IoT-enabled bikesharing systems and other shared mobility services. It establishes a forward-looking foundation for applying quantum-inspired optimization to large-scale, data-driven transportation challenges.</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Highlighted Projects for Research Associate | Cyber Security Specialist & AI Expert</p>
+            <p>Specializing in Research Security, Geospatial Analysis, Smart Mobility Systems, and Quantum-Inspired AI</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Highlight current project on scroll
+        const projects = document.querySelectorAll('.project');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.backgroundColor = '#f8fafc';
+                    setTimeout(() => {
+                        entry.target.style.backgroundColor = '';
+                    }, 1000);
+                }
+            });
+        }, observerOptions);
+        
+        projects.forEach(project => {
+            observer.observe(project);
+        });
+    </script>
+</body>
+</html>

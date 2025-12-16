@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlighted Projects for Postdoctoral Fellow</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a5276 0%, #2c3e50 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+            margin-top: 5px;
+        }
+        
+        .researcher-title {
+            background-color: #3498db;
+            color: white;
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 15px;
+            letter-spacing: 0.5px;
+        }
+        
+        .institution-info {
+            background-color: #2980b9;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: left;
+            display: inline-block;
+            max-width: 800px;
+        }
+        
+        .institution-info p {
+            margin-bottom: 5px;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .project {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        .project:last-child {
+            border-bottom: none;
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: #1a5276;
+            margin-bottom: 5px;
+        }
+        
+        .project-number {
+            display: inline-block;
+            background-color: #2c3e50;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+        
+        .funding-badge {
+            display: inline-block;
+            background-color: #27ae60;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin: 20px 0 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        h4 {
+            font-size: 1.2rem;
+            color: #3498db;
+            margin: 15px 0 8px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .feature-card {
+            background-color: #f8f9fa;
+            border-left: 4px solid #2980b9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .highlight-box {
+            background-color: #f0f9ff;
+            border: 1px solid #bae6fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .result-item {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #eaeaea;
+        }
+        
+        .result-item h4 {
+            margin-top: 0;
+        }
+        
+        .tag {
+            display: inline-block;
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .phase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .phase-card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 4px solid #3498db;
+        }
+        
+        .phase-number {
+            background-color: #3498db;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .comparison-table th {
+            background-color: #2c3e50;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .comparison-table td {
+            padding: 12px;
+            border: 1px solid #eaeaea;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .security-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .security-item {
+            background-color: #fff8e1;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .publication-box {
+            background-color: #e8f5e9;
+            border: 1px solid #c8e6c9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .executive-summary {
+            background-color: #f0f9ff;
+            border-left: 5px solid #1a5276;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+        
+        .executive-summary h3 {
+            border-bottom: none;
+            margin-top: 0;
+            color: #1a5276;
+        }
+        
+        @media (max-width: 768px) {
+            .project-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .funding-badge {
+                margin-top: 10px;
+                margin-left: 0;
+            }
+            
+            .feature-grid, .results-grid, .phase-grid, .security-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #eaeaea;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Postdoctoral Fellow Projects</h1>
+            <p class="subtitle">WiSense Project, University of Ottawa</p>
+            <div class="researcher-title">Advanced Research in Smart Grid Network Security and Authentication Systems</div>
+            
+            <div class="institution-info">
+                <p><strong>Research Area:</strong> Cybersecurity for Critical Infrastructure, Smart Grid Networks, Authentication Protocols</p>
+                <p><strong>Technologies:</strong> Elliptic Curve Cryptography (ECC), Zero-Knowledge Proofs, Attribute-Based Authorization, Wireless Sensor Networks</p>
+            </div>
+        </header>
+        
+        <div class="content">
+            <!-- Project 4.1 -->
+            <div class="project" id="pdf4.1">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">4.1</span>
+                        <h2>Lightweight, Multi-Factor Authentication and Attribute-Based Authorization for Secure Substation Automation in Smart Grid Networks</h2>
+                        <span class="funding-badge">Supported by: Ontario Ministry of Research and Innovation and NSERC Discovery Grant</span>
+                    </div>
+                </div>
+                
+                <div class="executive-summary">
+                    <h3>Executive Overview</h3>
+                    <p>This comprehensive project addresses critical cybersecurity gaps in modern Substation Automation Systems (SAS). As smart grids increasingly adopt IP-based communication and open protocols like IEC 61850 and DNP3, they become vulnerable to attacks due to reliance on weak authentication mechanisms—such as static or shared passwords—and a lack of fine-grained, auditable access control. These vulnerabilities conflict with stringent regulatory requirements from NERC CIP and IEC 62351, which mandate resilient, identity-based security even during network outages.</p>
+                </div>
+                
+                <h3>Core Contribution</h3>
+                <p>The core contribution of this work is a lightweight, substation-level security architecture that integrates multi-factor authentication, attribute-based authorization, and offline-capable operation while maintaining compatibility with existing infrastructure. The system operates without requiring costly hardware replacements, making it suitable for incremental deployment in operational technology (OT) environments.</p>
+                
+                <h3>Key Innovations</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Dual-Mode Authentication</h4>
+                        <p>Supports both normal operation and degraded mode during WAN outages, ensuring continuous secure access.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Elliptic Curve Cryptography</h4>
+                        <p>Uses secp256r1 with implicit certificates, reducing certificate size to ~400 bytes and eliminating explicit signature overhead.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Zero-Knowledge Proof Protocol</h4>
+                        <p>Incorporates ZKP-inspired protocol based on Schnorr identification scheme for enhanced security.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Attribute-Based Authorization</h4>
+                        <p>Implements Attribute Certificates (ACs) for fine-grained access control with short-lived validity periods.</p>
+                    </div>
+                </div>
+                
+                <h3>System Architecture</h3>
+                <p>The architecture centers on a Substation Controller (SSC) that acts as a local security gateway, performing server-aided verification (SAV). It supports two complementary authentication schemes:</p>
+                
+                <div class="phase-grid">
+                    <div class="phase-card">
+                        <div class="phase-number">A</div>
+                        <h4>Scheme A: Normal Operation</h4>
+                        <p>The user authenticates through the SSC, which mediates access to Intelligent Electronic Devices (IEDs).</p>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">B</div>
+                        <h4>Scheme B: Degraded Operation</h4>
+                        <p>During WAN outages, the user connects directly to an IED, which collaborates with the SSC using cached credentials to complete verification autonomously.</p>
+                    </div>
+                </div>
+                
+                <h3>Technical Implementation and Simulation</h3>
+                <p>To validate feasibility, the team built a detailed simulation framework in NS-3 (v3.39+), incorporating realistic constraints and modern cryptographic libraries. The NS-3 model included three node types:</p>
+                
+                <ul>
+                    <li><strong>UserNode:</strong> Simulated remote operator with multi-factor credentials.</li>
+                    <li><strong>SscNode:</strong> Full-featured controller acting as DNP3 master and local attribute authority.</li>
+                    <li><strong>IedNode:</strong> Resource-constrained (500 MHz CPU, 64 MB RAM) DNP3 outstation representing real-world IEDs.</li>
+                </ul>
+                
+                <h3>Performance Results</h3>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <h4>Authentication Latency</h4>
+                        <p>~120 ms (Scheme A)<br>~150 ms (Scheme B)</p>
+                    </div>
+                    
+                    <div class="result-item">
+                        <h4>IED CPU Utilization</h4>
+                        <p>&lt;15% (Scheme A)<br>&lt;18% (Scheme B)</p>
+                    </div>
+                    
+                    <div class="result-item">
+                        <h4>Message Overhead</h4>
+                        <p>Only +128 to +144 bytes per transaction</p>
+                    </div>
+                    
+                    <div class="result-item">
+                        <h4>Success Rate</h4>
+                        <p>100% in normal conditions<br>95%+ during link failures</p>
+                    </div>
+                </div>
+                
+                <h3>Security and Compliance</h3>
+                <div class="security-grid">
+                    <div class="security-item">
+                        <h4>Impersonation Resistance</h4>
+                        <p>Requires possession of ECC private key plus two passwords.</p>
+                    </div>
+                    
+                    <div class="security-item">
+                        <h4>MitM & Replay Protection</h4>
+                        <p>Prevented through challenge-response protocols and session-unique nonces.</p>
+                    </div>
+                    
+                    <div class="security-item">
+                        <h4>Insider Abuse Mitigation</h4>
+                        <p>Addressed via individualized ACs and cryptographic non-repudiation.</p>
+                    </div>
+                    
+                    <div class="security-item">
+                        <h4>DoS Protection</h4>
+                        <p>Limited by rate-limiting and pre-validation at the SSC.</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>Conclusion</h4>
+                    <p>This project delivers a practical, standards-compliant, and resilient security solution for substation automation. By combining lightweight ECC, multi-factor authentication, attribute-based authorization, and offline resilience, it enables utilities to meet stringent regulatory mandates without costly infrastructure overhauls. The work not only advances the state of the art in ICS security but also demonstrates how rigorous cryptographic design can be adapted for real-world operational constraints—offering a blueprint for securing the evolving smart grid and beyond.</p>
+                </div>
+            </div>
+            
+            <!-- Project 4.2 -->
+            <div class="project" id="pdf4.2">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">4.2</span>
+                        <h2>Secure, Scalable, and Interoperable Public Key Infrastructure for Multi-Domain Vehicle-to-Grid (V2G) Networks</h2>
+                        <span class="funding-badge">Supported by: Ontario Ministry of Economic Development, Innovation and Trade and Ontario ENERGY Smart Grid Fund</span>
+                    </div>
+                </div>
+                
+                <div class="executive-summary">
+                    <h3>Executive Overview</h3>
+                    <p>This project addresses critical security and scalability challenges in Vehicle-to-Grid (V2G) ecosystems. As electric vehicles (EVs) increasingly participate in smart grid operations—providing energy storage, frequency regulation, and bidirectional power flow—secure, dynamic, and cross-jurisdictional authentication becomes essential. However, the current V2G security standard, ISO/IEC 15118, relies on conventional X.509-based Public Key Infrastructure (PKI), which suffers from significant limitations: large certificate sizes (up to 800 bytes), rigid hierarchical trust models, slow validation due to explicit signatures, and path-length restrictions (≤3 levels). These constraints hinder seamless roaming of EVs across administrative domains such as different utilities, provinces, or countries.</p>
+                </div>
+                
+                <h3>Solution Overview</h3>
+                <p>To overcome these challenges, the project proposes a hybrid, multi-domain PKI framework grounded in Elliptic Curve Cryptography (ECC) and implicit certificates, specifically leveraging the ECQV (Elliptic Curve Qu-Vanstone) self-certified model. In this approach, a user's public key is reconstructed directly from the certificate itself, eliminating the need to transmit or store public keys separately and removing explicit signature overhead.</p>
+                
+                <h3>Key Innovations</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Compact Certificates</h4>
+                        <p>Certificates ~50% smaller than ECDSA and ~85–90% smaller than RSA-1024, with sizes well below 400 bytes.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Dual-Layer Trust Model</h4>
+                        <p>Combines hierarchical PKI within domains with peer-to-peer cross-certification between domains.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Cross-Domain Validation</h4>
+                        <p>Novel algorithms for efficient path validation across domains with zero-knowledge-inspired techniques.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Enhanced Scalability</h4>
+                        <p>EVs can store more than the ISO/IEC 15118–mandated limit of five root certificates.</p>
+                    </div>
+                </div>
+                
+                <h3>Performance Results</h3>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <h4>Certificate Validation Time</h4>
+                        <p>60–70% reduction compared to traditional X.509 RSA-1024</p>
+                    </div>
+                    
+                    <div class="result-item">
+                        <h4>Certificate Size</h4>
+                        <p>&lt;400 bytes (vs. 800+ bytes for traditional certificates)</p>
+                    </div>
+                    
+                    <div class="result-item">
+                        <h4>Cross-Domain Efficiency</h4>
+                        <p>Performance gains increase as certificate chains lengthen</p>
+                    </div>
+                </div>
+                
+                <div class="publication-box">
+                    <h4>Publications</h4>
+                    <p>This work was published across three key papers:</p>
+                    <ul>
+                        <li><strong>GLOBECOM 2011:</strong> Initial framework for multi-domain V2G PKI</li>
+                        <li><strong>DIVANet 2014:</strong> Enhanced algorithms for cross-domain validation</li>
+                        <li><strong>MILCOM 2015:</strong> Application to military and critical infrastructure scenarios</li>
+                    </ul>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>Impact and Applicability</h4>
+                    <p>Beyond V2G, the framework is applicable to other cyber-physical systems—including smart home energy networks and industrial IoT—where lightweight, cross-domain PKI is needed. By replacing rigid X.509 with a flexible, implicit-certificate-based model, the project enables the secure, dynamic, and efficient trust management essential for the future smart grid.</p>
+                </div>
+            </div>
+            
+            <!-- Project 4.3 -->
+            <div class="project" id="pdf4.3">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">4.3</span>
+                        <h2>Secure and Lightweight Authentication and Authorization Framework for Smart Energy Home Area Networks (SE-HAN)</h2>
+                        <span class="funding-badge">Supported by: Ontario Ministry of Research and Innovation and NSERC Discovery Grant</span>
+                    </div>
+                </div>
+                
+                <div class="executive-summary">
+                    <h3>Executive Overview</h3>
+                    <p>This project addresses critical security challenges in Smart Energy Home Area Networks (SE-HANs). SE-HANs form a vital link in the Advanced Metering Infrastructure (AMI) of the smart grid, connecting utility-owned devices (e.g., smart meters, Energy Service Interfaces—ESIs) with consumer-owned appliances (e.g., thermostats, EV chargers). However, their heterogeneous, resource-constrained nature makes them vulnerable to man-in-the-middle (MitM), impersonation, session hijacking, and key compromise attacks—especially when relying on traditional pre-shared key (PSK) models, which are inflexible and unscalable in multi-vendor environments.</p>
+                </div>
+                
+                <h3>Technical Approach</h3>
+                <p>To overcome these limitations, the project introduces a comprehensive, lightweight, and ECC-based security architecture grounded in Elliptic Curve Cryptography (ECC) and self-certified implicit certificates (based on the ECQV—Elliptic Curve Qu-Vanstone—scheme). This approach eliminates explicit CA signatures, reduces certificate size by ~50% compared to ECDSA, and requires only three ECC point multiplications per authentication—making it highly efficient for constrained devices.</p>
+                
+                <h3>Core Mechanisms</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Lightweight Device Authentication</h4>
+                        <p>Mutually authenticated key agreement protocol across five phases with strong security properties including UKS-R, FS, KCI-R, and KKS.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Secure Remote Access Architecture</h4>
+                        <p>Three-party model where ESI acts as gatekeeper between external users and internal HAN devices using modified GPS zero-knowledge identification protocol.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>ECC-Based Digital Signature Scheme</h4>
+                        <p>Built from identification protocol via Fiat–Shamir heuristic, providing confidentiality, unforgeability, and non-repudiation for remote commands.</p>
+                    </div>
+                </div>
+                
+                <h3>Key Advantages</h3>
+                <ul>
+                    <li><strong>No long-term pre-shared keys:</strong> Enables scalable, multi-vendor deployment</li>
+                    <li><strong>Compact credentials:</strong> Minimal communication rounds, reducing bandwidth and energy use</li>
+                    <li><strong>Remote access support:</strong> Ubiquitous access from smartphones and third-party service providers</li>
+                    <li><strong>Standards alignment:</strong> Compatible with ZigBee Smart Energy Profile (SEP) standards</li>
+                </ul>
+                
+                <div class="publication-box">
+                    <h4>Publications</h4>
+                    <ul>
+                        <li><strong>IEEE ICCE 2011:</strong> Lightweight Device Authentication protocol</li>
+                        <li><strong>IEEE ISGT 2012:</strong> Secure Remote Access Architecture</li>
+                        <li><strong>Springer Journal of Supercomputing 2013:</strong> ECC-Based Digital Signature Scheme</li>
+                    </ul>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>Broader Impact</h4>
+                    <p>Beyond residential energy management, this framework laid the cryptographic groundwork for later WiSense projects on V2G security and substation automation, demonstrating how lightweight, zero-trust principles can be applied across the smart grid ecosystem—from home networks to critical infrastructure.</p>
+                </div>
+            </div>
+            
+            <!-- Project 4.4 -->
+            <div class="project" id="pdf4.4">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">4.4</span>
+                        <h2>Lightweight, Secure, and Privacy-Preserving Communication Architectures for Wireless Mesh AMI and Aggregator-Based V2G Networks</h2>
+                        <span class="funding-badge">Supported by: Ontario Ministry of Research and Innovation and NSERC Discovery Grant</span>
+                    </div>
+                </div>
+                
+                <div class="executive-summary">
+                    <h3>Executive Overview</h3>
+                    <p>This project addresses two critical security and privacy challenges in smart grid communications: (1) securing wireless mesh Advanced Metering Infrastructure (AMI) networks against active routing attacks, and (2) enabling privacy-preserving participation of electric vehicles (EVs) in Aggregator-Based Vehicle-to-Grid (V2G) systems.</p>
+                </div>
+                
+                <h3>Wireless Mesh AMI Security</h3>
+                <p>For Wireless Mesh AMI, traditional routing protocols like AODV are vulnerable to black hole, wormhole, and Sybil attacks, especially in dynamic, multi-hop environments where mobile maintenance vehicles act as transient repeaters. To counter this, the team designed two novel protocols: SAODV2MP and its interference-aware variant iSAODV2MP.</p>
+                
+                <h4>Protocol Features</h4>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Aggregated Designated Verifier Signatures (A-DVS)</h4>
+                        <p>ECC-based signatures for Route Request (RREQ) integrity, verifiable only by the destination and resistant to tampering.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Aggregated MACs with On-the-Fly Shared Keys (AMAC-OSK)</h4>
+                        <p>Pairwise ephemeral keys (via ECDH) enable constant-size, aggregated message authentication for Route Replies (RREPs), regardless of path length.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Watchdog Monitoring</h4>
+                        <p>In iSAODV2MP detects malicious relay behavior like packet dropping.</p>
+                    </div>
+                </div>
+                
+                <h4>Performance Results</h4>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <h4>Packet Delivery Ratio</h4>
+                        <p>&gt;80% even under 20% malicious nodes</p>
+                    </div>
+                    
+                    <div class="result-item">
+                        <h4>Computational Overhead</h4>
+                        <p>Only 3–4 ECC point multiplications per node</p>
+                    </div>
+                    
+                    <div class="result-item">
+                        <h4>Performance Advantage</h4>
+                        <p>Significantly outperforms SAODV and SAODV-MAP in dynamic, attack-prone environments</p>
+                    </div>
+                </div>
+                
+                <h3>Privacy-Preserving V2G</h3>
+                <p>For Aggregator-Based V2G, the challenge lies in balancing authentication with EV owner privacy. Existing certificate- or identity-based schemes either leak user identity or rely on computationally expensive bilinear pairings, unsuitable for embedded EV hardware. The project introduced an ECC-based Restrictive Partially Blind Signature (RPBS) scheme that enables anonymous yet accountable grid participation.</p>
+                
+                <h4>RPBS Scheme Features</h4>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Dynamic Pseudonyms</h4>
+                        <p>EVs use unlinkable pseudonyms (PIDEV) across sessions.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Self-Certified ECC PKI</h4>
+                        <p>TA issues partial private keys without key escrow.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Conditional Identity Revelation</h4>
+                        <p>Supports identity revelation in cases of misuse while maintaining privacy otherwise.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Computational Efficiency</h4>
+                        <p>Avoids bilinear pairings, using only ECC scalar multiplications.</p>
+                    </div>
+                </div>
+                
+                <h4>Performance Advantage</h4>
+                <div class="highlight-box">
+                    <p>The RPBS scheme uses only ECC scalar multiplications (~0.6 ms per operation vs. ~4.5 ms for pairing-based approaches), resulting in <strong>&gt;50% computational savings</strong> over prior ID-based schemes.</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>Unified Design Philosophy</h4>
+                    <p>Both components reflect a unified design philosophy: minimize reliance on heavy PKI or trusted third parties, leverage lightweight ECC, and support offline or degraded-mode operation—essential for real-world smart grid resilience. The AMI solutions align with IEEE 802.11s, ZigBee, and AODVv2, while the V2G architecture extends ISO/IEC 15118 with robust privacy.</p>
+                </div>
+            </div>
+            
+            <!-- Project 4.5 -->
+            <div class="project" id="pdf4.5">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">4.5</span>
+                        <h2>Lightweight, Mutual Two-Factor Authentication with Session Key Agreement for Resource-Constrained Wireless Sensor Networks</h2>
+                        <span class="funding-badge">Funded by: Ontario Ministry of Research and Innovation</span>
+                    </div>
+                </div>
+                
+                <div class="executive-summary">
+                    <h3>Executive Overview</h3>
+                    <p>This research project addresses critical security gaps in Wireless Sensor Networks (WSNs) deployed in unattended or infrastructure-limited environments—such as disaster zones, battlefields, or remote industrial sites. In such settings, users must securely authenticate directly with sensor nodes, often without a persistent gateway or base station, yet existing two-factor authentication schemes suffer from severe vulnerabilities: susceptibility to stolen smart card attacks, lack of mutual authentication, absence of session key agreement, and insecure password update mechanisms.</p>
+                </div>
+                
+                <h3>Protocol Design</h3>
+                <p>To overcome these limitations, the project proposes a novel, lightweight, mutual two-factor authentication protocol that integrates secure session key establishment while remaining feasible for highly constrained sensor hardware. The design uses only hash functions and XOR operations—avoiding public-key cryptography on sensor nodes—and supports offline password updates, enhancing both security and usability.</p>
+                
+                <h3>Protocol Phases</h3>
+                <div class="phase-grid">
+                    <div class="phase-card">
+                        <div class="phase-number">1</div>
+                        <h4>Registration</h4>
+                        <p>User registers with Gateway (GWN), which issues a smart card with carefully constructed parameters. The shared secret xs is never stored on the card.</p>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">2</div>
+                        <h4>Login & Authentication</h4>
+                        <p>User inputs identity and password; smart card verifies credentials and generates dynamic identity and authentication tokens with fresh nonces and timestamps.</p>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">3</div>
+                        <h4>Three-Party Mutual Authentication</h4>
+                        <p>User, GWN, and Sensor engage in synchronized exchange with chained hash-based challenges for mutual trust verification.</p>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">4</div>
+                        <h4>Session Key Agreement</h4>
+                        <p>User and sensor independently compute shared session key SK using pseudo-random function derived from dynamic values and secret xs.</p>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">5</div>
+                        <h4>Password Change</h4>
+                        <p>Users update passwords locally without GWN involvement, reducing network dependency and mitigating insider threats.</p>
+                    </div>
+                </div>
+                
+                <h3>Security Properties</h3>
+                <p>The protocol satisfies 10 essential security properties, including resistance to:</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Stolen Smart Card Attacks</h4>
+                        <p>Shared secret xs never stored on card</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Node Capture Attacks</h4>
+                        <p>Forward secrecy maintained</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Replay & Parallel Session Attacks</h4>
+                        <p>Fresh nonces and timestamps prevent replay</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Privileged Insider Attacks</h4>
+                        <p>Zero-knowledge password verification</p>
+                    </div>
+                </div>
+                
+                <h3>Performance Analysis</h3>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <h4>Sensor Node Operations</h4>
+                        <p>Only 3 hash operations per session</p>
+                    </div>
+                    
+                    <div class="result-item">
+                        <h4>User Device Operations</h4>
+                        <p>~9 hash operations (manageable on smartphones/PDAs)</p>
+                    </div>
+                    
+                    <div class="result-item">
+                        <h4>Hardware Compatibility</h4>
+                        <p>Well within capabilities of IEEE 802.15.4/ZigBee-class devices</p>
+                    </div>
+                    
+                    <div class="result-item">
+                        <h4>Formal Validation</h4>
+                        <p>Verified using Rubin's Non-Monotonic Cryptographic Protocol Logic</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>Application and Impact</h4>
+                    <p>Compared to prior work, this solution offers superior security with minimal overhead, striking an optimal balance for real-world WSN deployments. Its gateway-resilient design makes it particularly suitable for degraded or disconnected operational scenarios, aligning with the needs of smart grid edge networks, industrial IoT, emergency response, and environmental monitoring.</p>
+                    <p>By closing critical security gaps while respecting hardware constraints, this work provides a practical, provably secure foundation for authenticated, encrypted interactions in next-generation wireless sensor ecosystems.</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>WiSense Research Initiative | University of Ottawa | Cybersecurity for Smart Grid Networks</p>
+            <p>Postdoctoral Research Projects (2011-2016) | Compiled from research papers and technical reports</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Highlight current project on scroll
+        const projects = document.querySelectorAll('.project');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.backgroundColor = '#f8fafc';
+                    setTimeout(() => {
+                        entry.target.style.backgroundColor = '';
+                    }, 1000);
+                }
+            });
+        }, observerOptions);
+        
+        projects.forEach(project => {
+            observer.observe(project);
+        });
+    </script>
+</body>
+</html>

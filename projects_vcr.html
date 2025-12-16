@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlighted Projects for Visiting Collaborative Researcher</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #0d2b4d 0%, #1a3d6d 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+            margin-top: 5px;
+        }
+        
+        .researcher-title {
+            background-color: #e63946;
+            color: white;
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 15px;
+            letter-spacing: 0.5px;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .project {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        .project:last-child {
+            border-bottom: none;
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: #0d2b4d;
+            margin-bottom: 5px;
+        }
+        
+        .project-number {
+            display: inline-block;
+            background-color: #0d2b4d;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+        
+        .github-link {
+            background-color: #333;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .github-link:hover {
+            background-color: #e63946;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            color: #1a3d6d;
+            margin: 20px 0 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        h4 {
+            font-size: 1.2rem;
+            color: #2a5298;
+            margin: 15px 0 8px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .feature-card {
+            background-color: #f8f9fa;
+            border-left: 4px solid #1a3d6d;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .highlight-box {
+            background-color: #e8f4fd;
+            border: 1px solid #c1dbf7;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .comparison-table th {
+            background-color: #0d2b4d;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .comparison-table td {
+            padding: 12px;
+            border: 1px solid #eaeaea;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .tool-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .tool-item {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #eaeaea;
+        }
+        
+        .tool-item h4 {
+            margin-top: 0;
+        }
+        
+        .tag {
+            display: inline-block;
+            background-color: #e8f4fd;
+            color: #2a5298;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .use-case-box {
+            background-color: #fff8e1;
+            border: 1px solid #ffecb3;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .phase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .phase-card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 4px solid #e63946;
+        }
+        
+        .phase-number {
+            background-color: #e63946;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .project-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .github-link {
+                margin-top: 10px;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tool-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .phase-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #eaeaea;
+            margin-top: 30px;
+        }
+        
+        .executive-summary {
+            background-color: #f0f7ff;
+            border-left: 5px solid #0d2b4d;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+        
+        .executive-summary h3 {
+            border-bottom: none;
+            margin-top: 0;
+            color: #0d2b4d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Highlighted Projects for Visiting Collaborative Researcher</h1>
+            <p class="subtitle">Cyber Security Specialist & AI Expert</p>
+            <div class="researcher-title">Specializing in Threat Intelligence, AI Security, and Research Compliance</div>
+        </header>
+        
+        <div class="content">
+            <!-- Project 2.1 -->
+            <div class="project" id="vcr2.1">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">2.1</span>
+                        <h2>EDR Threat Hunting & Incident Response Project</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/edr-threat-hunting-ir" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <p>This repository demonstrates practical implementations of EDR (Endpoint Detection and Response) for threat hunting and incident response using Wazuh in a virtualized lab setup. It includes hands-on simulation of adversarial techniques and a real-world industrial use case in EV Charging Infrastructure Management.</p>
+                
+                <h3>Objectives</h3>
+                <ul>
+                    <li>Deploy Wazuh XDR/EDR with Docker and configure agent-based monitoring.</li>
+                    <li>Simulate adversarial behavior using MITRE ATT&CK TTPs.</li>
+                    <li>Conduct blue team threat hunting and forensic investigation.</li>
+                    <li>Analyze a real-world attack simulation in EV infrastructure using Wazuh.</li>
+                </ul>
+                
+                <h3>Implementation of EDR Threat Hunting & Incident Response System</h3>
+                <h4>Objective</h4>
+                <p>Set up a complete environment for Wazuh (XDR/EDR + SIEM) with Docker, network configuration, and endpoint pairing for real-time threat monitoring and hunting.</p>
+                
+                <div class="use-case-box">
+                    <h4>Real-World Use Case: EV Charging Infrastructure Management</h4>
+                    <h5>Scenario: Lateral Movement and Persistence in EV Charging Control Systems</h5>
+                    
+                    <p><strong>Context:</strong></p>
+                    <p>A regional utility provider operates an expanding network of EV charging stations across multiple urban zones. Each station is equipped with smart meters and edge devices communicating over secure VPN tunnels to a centralized SCADA system. A suspected compromise was detected on one of the edge nodes managing real-time billing and load balancing.</p>
+                </div>
+            </div>
+            
+            <!-- Project 2.2 -->
+            <div class="project" id="vcr2.2">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">2.2</span>
+                        <h2>Threat & Risk Intelligence Suite</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/threat-risk-intelligence" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <h3>Overview</h3>
+                <p>This repository presents a dual-component framework for holistic threat intelligence and executive protection. Each module serves a distinct purpose, catering to both organizational and individual-level risk profiling.</p>
+                
+                <h4>1. Comprehensive Threat & Risk Intelligence</h4>
+                <p>This document categorizes and compares core threat intelligence solutions across three domains:</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>A. Physical Security Intelligence (PSI)</h4>
+                        <ul>
+                            <li><strong>Focus:</strong> Real-world threats to personnel/assets.</li>
+                            <li><strong>Tools:</strong> Liferaft, Fivecast ONYX, Flashpoint PSI.</li>
+                            <li><strong>Use Cases:</strong> Travel risk monitoring, protest alerts, geospatial tracking.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>B. Enterprise Threat Intelligence (ETI)</h4>
+                        <ul>
+                            <li><strong>Focus:</strong> Cyber threats, malware, nation-state actors.</li>
+                            <li><strong>Tools:</strong> Recorded Future, Mandiant, Cybersixgill, Anomali.</li>
+                            <li><strong>Use Cases:</strong> Dark web intelligence, patch prioritization, APT tracking.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>C. Digital Risk Protection (DRP)</h4>
+                        <ul>
+                            <li><strong>Focus:</strong> Reputation threats, impersonation, data breaches.</li>
+                            <li><strong>Tools:</strong> ZeroFOX, Digital Shadows, Brandwatch, Blackbird AI.</li>
+                            <li><strong>Use Cases:</strong> Social media takedowns, credential leakage alerts, executive impersonation detection.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h4>2. Integrated Executive Risk Indexing System (iERIS)</h4>
+                <p>A next-generation, AI-powered platform that quantifies digital, behavioral, and geospatial vulnerabilities for high-risk individuals using real-time OSINT.</p>
+                
+                <h4>Key Features</h4>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Executive Risk Index (ERI)</h4>
+                        <p>Composite score based on:</p>
+                        <ul>
+                            <li>Digital Surface Exposure</li>
+                            <li>Social Volatility</li>
+                            <li>Geolocation Risk</li>
+                            <li>Visual Intelligence</li>
+                            <li>Threat Mentions</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Automated OSINT Aggregation</h4>
+                        <p>From APIs like HaveIBeenPwned, Twitter, LinkedIn, ExifTool, and dark web scrapers.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>NLP and Visual Analysis</h4>
+                        <p>Sentiment scoring, threat intent detection, facial metadata extraction.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Streamlit Dashboard</h4>
+                        <p>Real-time exposure mapping, alert visualizations, and mitigation workflows.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>SIEM Integration</h4>
+                        <p>Slack, MS Teams, Splunk-compatible alerts.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2.3 -->
+            <div class="project" id="vcr2.3">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">2.3</span>
+                        <h2>Cutting-Edge Threat Intelligence Platforms for Critical Sectors</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/cutting-edge-ti-platforms" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <h3>Overview</h3>
+                <p>This repository contains two comprehensive guides for developing threat intelligence platforms tailored to specific sectors:</p>
+                
+                <ol>
+                    <li><strong>Energy Market Threat Intelligence Platform (EMTIP)</strong> - Focuses on cyber, geopolitical, and physical risk fusion for energy trading ecosystems.</li>
+                    <li><strong>Financial Cybersecurity Threat Intelligence Dashboard</strong> - Provides a framework for real-time cyber and geopolitical threat monitoring in the financial sector.</li>
+                </ol>
+                
+                <h3>Key Features by Document</h3>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>1. Energy Market Threat Intelligence Platform</h4>
+                        <ul>
+                            <li><strong>Objective:</strong> Unified platform for energy sector threats (cyber, geopolitical, physical).</li>
+                            <li><strong>Highlights:</strong>
+                                <ul>
+                                    <li>Cross-domain correlation (e.g., SCADA cyberattacks + geopolitical unrest).</li>
+                                    <li>Market-sensitive scoring (Threat Score = CVSS + Market Sensitivity + Geospatial Proximity).</li>
+                                    <li>Role-based dashboards (traders, CISOs, executives).</li>
+                                    <li>Automated LLM briefings with guardrails.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Technologies:</strong> Neo4j, GPT-4, Power BI, MISP, ACLED.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>2. Financial Cybersecurity Threat Intelligence Dashboard</h4>
+                        <ul>
+                            <li><strong>Objective:</strong> Real-time threat visualization for financial SOC teams.</li>
+                            <li><strong>Highlights:</strong>
+                                <ul>
+                                    <li>OSINT feed automation (AlienVault OTX, DarkOwl).</li>
+                                    <li>Geopolitical sentiment analysis (NLTK).</li>
+                                    <li>Compliance alignment (ISO 27001, SOC 2).</li>
+                                </ul>
+                            </li>
+                            <li><strong>Technologies:</strong> Splunk, Elasticsearch, Power BI, Python (Pandas, NLTK).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2.4 -->
+            <div class="project" id="vcr2.4">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">2.4</span>
+                        <h2>Anomaly Detection on ECG</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/AnomalyDetection_ECG" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <p>This project focuses on anomaly detection in electrocardiograms (ECGs) using an autoencoder neural network. The objective is to identify abnormal heartbeats from ECG data, which can be crucial for early detection of heart diseases.</p>
+            </div>
+            
+            <!-- Project 2.5 -->
+            <div class="project" id="vcr2.5">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">2.5</span>
+                        <h2>Institutional Research Partner Risk Index (IRPRI)</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/institutional-research-partner-risk-index" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <p>IRPRI is a Streamlit-powered web application designed to automate the due diligence and vetting process of international and domestic research partners. It aggregates open-source intelligence and institutional data to compute comprehensive risk scores for research collaborations.</p>
+                
+                <h3>Objective</h3>
+                <p>To develop an institutional-grade tool that supports research security compliance and strategic decision-making by evaluating reputational, regulatory, and technological risk associated with research profiles.</p>
+                
+                <h3>Key Features</h3>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Data Aggregation</h4>
+                        <p>Aggregates risk intelligence from multiple sources:</p>
+                        <ul>
+                            <li>Canadian Named Research Organizations (NSGP-aligned NRO list)</li>
+                            <li>STRAC-aligned Sensitive Technology Research Areas (STRA)</li>
+                            <li>ECL Canada Dual-Use Technology List</li>
+                            <li>Sanctions Lists (CA, UN, OFAC/US)</li>
+                            <li>Predatory Journals (via Beall's List web scraper)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Researcher Profile Evaluation</h4>
+                        <p>Accepts researcher input with:</p>
+                        <ul>
+                            <li>ORCID iD</li>
+                            <li>Affiliated institution</li>
+                            <li>Project description</li>
+                            <li>STRA and dual-use technology classification</li>
+                            <li>Funding sources</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>ORCID Integration</h4>
+                        <p>Optional researcher ID enables linkage to academic records and publication metadata.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Automated Risk Scoring Engine</h4>
+                        <p>Computes five core risk components:</p>
+                        <ul>
+                            <li>Reputational</li>
+                            <li>Sanctions</li>
+                            <li>Named Research Organization (NRO)</li>
+                            <li>Sensitive Technology Research Area (STRA)</li>
+                            <li>Dual-Use Technology</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Dashboard Views</h4>
+                        <p>Real-time data inspection of sanctions, NROs, STRA, dual-use categories, and predatory publishers.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Streamlit Interface</h4>
+                        <p>Fast UI integration with full functionality for profile submission, lookup, and score visualization.</p>
+                    </div>
+                </div>
+                
+                <h3>Composite Risk Outcomes</h3>
+                <ul>
+                    <li><strong>High Risk:</strong> Score ≥ 0.7 (e.g., NRO + STRA or sanctions)</li>
+                    <li><strong>Moderate Risk:</strong> 0.4 ≤ Score < 0.7</li>
+                    <li><strong>Low Risk:</strong> Score < 0.4</li>
+                </ul>
+            </div>
+            
+            <!-- Project 2.6 -->
+            <div class="project" id="vcr2.6">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">2.6</span>
+                        <h2>Strengthening Research Security in Canada: A Risk-Based Framework with Digital Tools</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/research-security-risk-assessment" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <div class="highlight-box">
+                    <h3>The Growing Importance of Research Security in Canada</h3>
+                    <p>Canada's world-class research institutions are at the forefront of innovation, attracting global collaborations and funding. However, with increasing geopolitical tensions and sophisticated cyber threats, safeguarding Canadian research from foreign interference, intellectual property theft, and unintended technology transfers has become a national priority.</p>
+                    
+                    <p>A Research Security Risk Assessment Framework helps Canadian universities, government labs, and private-sector R&D centers:</p>
+                    <ul>
+                        <li>Protect sensitive research in critical technologies (AI, quantum, biotech, defense)</li>
+                        <li>Comply with federal guidelines, including the National Security Guidelines for Research Partnerships (NSGRP) and Safeguarding Your Research policies</li>
+                        <li>Mitigate risks while maintaining Canada's tradition of open, collaborative science</li>
+                    </ul>
+                </div>
+                
+                <h3>Designing a Canadian Research Security Framework</h3>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>1. Identifying Key Threats</h4>
+                        <p>Canadian research faces unique risks, including:</p>
+                        <ul>
+                            <li>Foreign state-sponsored interference in academic collaborations</li>
+                            <li>Cyber espionage targeting intellectual property</li>
+                            <li>Unintended technology transfers to high-risk entities</li>
+                            <li>Export control violations (e.g., sharing restricted tech with sanctioned entities)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>2. Assessing Vulnerabilities</h4>
+                        <p>A risk-based approach evaluates:</p>
+                        <ul>
+                            <li>Research sensitivity (dual-use, military applications)</li>
+                            <li>Funding sources (foreign vs. domestic, industry vs. government)</li>
+                            <li>Collaboration risks (partners in high-risk jurisdictions)</li>
+                            <li>Data security (controlled, classified, or proprietary information)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>3. Tailoring to Canadian Research Priorities</h4>
+                        <ul>
+                            <li><strong>AI & Advanced Computing:</strong> Preventing misuse in surveillance or autonomous weapons</li>
+                            <li><strong>Quantum Technologies:</strong> Protecting cryptographic and sensing breakthroughs</li>
+                            <li><strong>Biotechnology & Health Research:</strong> Securing genomic data and bio-manufacturing IP</li>
+                            <li><strong>Energy & Cleantech:</strong> Safeguarding critical infrastructure research</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Implementing Research Security in Canadian Institutions</h3>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>1. Integrating Security into the Research Lifecycle</h4>
+                        <ul>
+                            <li><strong>Pre-Award Screening:</strong> Assessing risks before grants are approved (aligned with NSGRP)</li>
+                            <li><strong>Collaborator Due Diligence:</strong> Vetting international partners against sanctions lists</li>
+                            <li><strong>Ongoing Monitoring:</strong> Tracking changes in project risk profiles</li>
+                            <li><strong>Publication & Tech Transfer Reviews:</strong> Preventing unintended disclosures</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>2. Cross-Institutional Collaboration</h4>
+                        <ul>
+                            <li><strong>University Research Offices:</strong> Leading risk assessments & compliance</li>
+                            <li><strong>Federal Partners (PSP, CSIS, GAC):</strong> Providing threat intelligence</li>
+                            <li><strong>Cybersecurity Teams:</strong> Securing research data & infrastructure</li>
+                            <li><strong>Legal & Export Control Teams:</strong> Ensuring regulatory compliance</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>3. Tools & Best Practices</h4>
+                        <ul>
+                            <li>Standardized Risk Questionnaires (e.g., STRAC templates)</li>
+                            <li>Automated Affiliation Checks (OpenSanctions, NRO lists)</li>
+                            <li>Secure Collaboration Platforms for sensitive projects</li>
+                            <li>Researcher Training on security best practices</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Research Security Risk Assessment Portal: The Streamlit Web App</h3>
+                <p>To operationalize research security assessments, we developed an interactive Streamlit web application that enables:</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>1. Automated Risk Assessments</h4>
+                        <ul>
+                            <li>Real-time threat scoring based on project details (funding sources, collaborators, research domain)</li>
+                            <li>Standardized questionnaires aligned with Canadian security policies (NSGRP, STRAC)</li>
+                            <li>Visual risk dashboards showing threat levels and mitigation recommendations</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>2. Collaboration Screening</h4>
+                        <ul>
+                            <li>Automated checks against Canadian sanctions lists and high-risk entities</li>
+                            <li>Affiliation vetting for international partners</li>
+                            <li>Export control flagging for sensitive technologies</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>3. Continuous Monitoring & Reporting</h4>
+                        <ul>
+                            <li>Dynamic risk registers tracking project security postures over time</li>
+                            <li>Automated alerts for emerging threats (cyber risks, geopolitical changes)</li>
+                            <li>Executive reporting for institutional leadership and federal compliance</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h3>The Way Forward for Canada</h3>
+                    <p>Research security is not about isolation—it's about smart protection. By adopting a risk-based, adaptable framework, Canadian institutions can:</p>
+                    <ul>
+                        <li>Protect cutting-edge research from theft or misuse</li>
+                        <li>Maintain trust with government and industry funders</li>
+                        <li>Enable secure global collaborations with like-minded partners</li>
+                        <li>Stay ahead of evolving threats in a competitive R&D landscape</li>
+                    </ul>
+                    <p>As Canada invests in critical technologies, a strong research security framework ensures that innovation thrives—safely and securely.</p>
+                </div>
+            </div>
+            
+            <!-- Project 2.7 -->
+            <div class="project" id="vcr2.7">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">2.7</span>
+                        <h2>Smart Research Security Compliance Suite</h2>
+                    </div>
+                    <div></div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h3>Strengthening Compliance, Mitigating Risk, Safeguarding Innovation</h3>
+                    <p>In today's complex research landscape, Canadian institutions must navigate evolving national security expectations while upholding academic freedom and international collaboration. The Smart Institutional Research Security Compliance Suite is a purpose-built solution designed to help institutions achieve operational compliance with Canada's leading research security policies—efficiently and effectively. This internal portal integrates key compliance workflows into a unified system, offering targeted self-assessments, risk evaluation, and reporting tools aligned with national guidance and policy instruments.</p>
+                </div>
+                
+                <h3>Why This Suite Matters</h3>
+                <p>With increasing scrutiny on partnerships, dual-use technologies, and global affiliations, institutions must demonstrate proactive diligence. This platform ensures:</p>
+                <ul>
+                    <li>Streamlined researcher self-assessments</li>
+                    <li>Integrated checks across multiple regulatory domains</li>
+                    <li>Institutional recordkeeping for audits and risk reviews</li>
+                    <li>Policy-aligned mitigation plans and templates</li>
+                </ul>
+                
+                <h3>Key Modules at a Glance</h3>
+                <p>It introduces users to the suite and outlines its purpose—supporting institutional compliance with:</p>
+                <ul>
+                    <li>NSGRP (National Security Guidelines for Research Partnerships)</li>
+                    <li>STRAC (Sensitive Technology Research and Affiliations of Concern)</li>
+                    <li>NRO (Named Research Organizations) monitoring</li>
+                    <li>CGP (Controlled Goods Program) compliance</li>
+                    <li>Sensitive technology classification guidance</li>
+                </ul>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>STRAC Institutional Self-Check</h4>
+                        <p>The Selfcheck module guides researchers through STRAC-related risk disclosure:</p>
+                        <ul>
+                            <li>Structured questionnaire for affiliations, funding, and support involving NROs</li>
+                            <li>Focused on identifying STRAC-relevant relationships in alignment with federal guidance</li>
+                            <li>Generates internal assessment results with flags for compliance teams</li>
+                            <li>No personal identifiers collected; supports anonymized audit tracking</li>
+                        </ul>
+                        <p><em>Designed for pre-submission screening in NSERC/SSHRC/CIHR-funded research.</em></p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Smart RAF (Risk Assessment Form)</h4>
+                        <p>The Smart RAF module is a dynamic, rule-based NSGRP-integrated form that evaluates:</p>
+                        <ul>
+                            <li>Research sensitivity (e.g., critical minerals, infrastructure, personal data)</li>
+                            <li>Partner integrity, foreign influence, and legal risks</li>
+                            <li>STRAC-sensitive domains (e.g., AI, quantum, biosecurity, photonics)</li>
+                            <li>NRO entity detection based on partner name</li>
+                            <li>Risk mitigation plans with institutional assurance options</li>
+                        </ul>
+                        <p><em>Includes STRAC classifier and generates institutionally reviewable submissions.</em></p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>CGP Compliance Assessment</h4>
+                        <p>The CGP module supports institutional determination for Controlled Goods Program registration:</p>
+                        <ol>
+                            <li><strong>Technology Classification:</strong> Auto-match descriptions against ECL categories (munitions, aerospace, cryptography, etc.)</li>
+                            <li><strong>Research Context:</strong> Assess military applications, tech transfer, foreign partnerships</li>
+                            <li><strong>CGP Determination:</strong> Informs researchers when CGP registration is likely required</li>
+                            <li><strong>Technology Control Plan (TCP):</strong> Generates customizable templates</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2.8 -->
+            <div class="project" id="vcr2.8">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">2.8</span>
+                        <h2>EVCS Infrastructure LLM</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/EVCS_Infrastructure_LLM" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <p>This project is designed to determine the electric vehicle charging station (EVCS) infrastructure in Canada using the OpenAI API via the LangChain library. The project consists of multiple steps to identify the province with the most EV public chargers, the number of public EV charging stations in the city within the province with the most EV public chargers, and the detailed breakdown of chargers in that city.</p>
+            </div>
+            
+            <!-- Project 2.9 -->
+            <div class="project" id="vcr2.9">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">2.9</span>
+                        <h2>Age Bias Detection and Mitigation Strategies for Credit Decision Making</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/bias_mitigation_credit_scores" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <p>This project focuses on detecting and mitigating age-related bias in credit decision-making using machine learning models. Bias in automated credit scoring can lead to unfair decisions, especially regarding sensitive attributes like age. The goal is to assess and mitigate age bias in predictive models built using the German Credit dataset and improve the fairness of credit decisions across different age groups.</p>
+                
+                <h3>Problem Statement</h3>
+                <ul>
+                    <li>In financial decision-making, such as loan approvals, biased models can negatively impact specific groups of individuals. This project aims to explore how age bias affects credit decision models and implement bias mitigation strategies to promote fairer outcomes. We analyze the disparity between the privileged group (age ≥ 25) and the unprivileged group (age < 25) in the model's decisions.</li>
+                </ul>
+                
+                <h3>Methodology</h3>
+                
+                <div class="phase-grid">
+                    <div class="phase-card">
+                        <div class="phase-number">1</div>
+                        <h4>Bias Detection</h4>
+                        <ul>
+                            <li>We begin by training machine learning models (Logistic Regression and Random Forest) on the dataset without applying any bias mitigation techniques.</li>
+                            <li>Fairness metrics such as Disparate Impact, Average Odds Difference, Equal Opportunity Difference, and Statistical Parity Difference are computed to evaluate the presence of bias based on the protected attribute: Age.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">2</div>
+                        <h4>Bias Mitigation (Reweighing)</h4>
+                        <ul>
+                            <li>After detecting bias, we apply the Reweighing technique (a pre-processing bias mitigation algorithm). This technique adjusts the weights of the training data to balance the outcomes for privileged and unprivileged groups.</li>
+                            <li>We retrain the models using the transformed dataset and reassess bias using the same fairness metrics.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">3</div>
+                        <h4>Model Evaluation</h4>
+                        <ul>
+                            <li>The models are evaluated both for accuracy and fairness. We compare the performance before and after bias mitigation to assess the effectiveness of the reweighing technique.</li>
+                            <li>The fairness metrics are computed on both the original and transformed datasets to measure the change in bias.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Results</h3>
+                <ul>
+                    <li><strong>Without Bias Mitigation:</strong> Initial analysis shows that the privileged group (age ≥ 25) received more favorable credit outcomes compared to the unprivileged group (age < 25).</li>
+                    <li><strong>With Bias Mitigation (Reweighing):</strong> After applying the reweighing technique, there was a notable improvement in fairness metrics, such as Disparate Impact and Equal Opportunity Difference, while maintaining a comparable level of model accuracy.</li>
+                </ul>
+            </div>
+            
+            <!-- Project 2.10 -->
+            <div class="project" id="vcr2.10">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">2.10</span>
+                        <h2>Hardening a Deep Learning–Based Intrusion Detection System Against Adversarial Attacks</h2>
+                    </div>
+                    <div></div>
+                </div>
+                
+                <div class="executive-summary">
+                    <h3>Executive Summary</h3>
+                    <p>Modern Intrusion Detection Systems (IDS) increasingly rely on deep learning models to classify network traffic as benign or malicious. While these models achieve high accuracy on clean data, they are demonstrably vulnerable to adversarial attacks—carefully crafted perturbations that cause malicious traffic to be misclassified as benign. This project systematically evaluates this vulnerability and implements practical defense mechanisms to harden a deep learning–based IDS, with direct applicability to critical infrastructure environments.</p>
+                    
+                    <p>The project follows a structured, end-to-end methodology consisting of four phases: <strong>build, attack, defend, and evaluate</strong>. First, a baseline IDS is developed using a Long Short-Term Memory (LSTM) neural network trained on the CIC-IDS2017 dataset, reformulated as a binary classification problem (benign vs. attack traffic). Rigorous preprocessing—including data cleaning, normalization, and reshaping for sequence modeling—ensures a robust experimental foundation. The baseline model achieves near-perfect accuracy on clean test data, establishing a strong reference point.</p>
+                    
+                    <p>Second, the system's resilience is intentionally challenged using adversarial machine learning techniques. Leveraging the Adversarial Robustness Toolbox (ART), Fast Gradient Sign Method (FGSM) attacks are generated under a white-box threat model. Results clearly demonstrate a severe degradation in detection capability—accuracy dropping from ~99% on clean data to nearly random performance under adversarial conditions—highlighting the fragility of standard deep learning–based IDS when faced with adaptive attackers.</p>
+                    
+                    <p>Third, three complementary defense mechanisms are implemented and analyzed.</p>
+                </div>
+                
+                <div class="phase-grid">
+                    <div class="phase-card">
+                        <div class="phase-number">1</div>
+                        <h4>Adversarial Training</h4>
+                        <p>Augments the training set with adversarial examples, forcing the model to learn more robust decision boundaries.</p>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">2</div>
+                        <h4>Defensive Distillation</h4>
+                        <p>Applies a teacher–student learning paradigm with softened labels to smooth class boundaries and reduce sensitivity to small perturbations.</p>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">3</div>
+                        <h4>Feature Squeezing</h4>
+                        <p>Acts as a lightweight, inference-time defense by reducing input feature precision and collapsing adversarial noise.</p>
+                    </div>
+                </div>
+                
+                <p>In the final evaluation phase, all defended models are benchmarked against both clean and adversarial test data. Adversarial training emerges as the most effective defense, restoring adversarial accuracy to above 90% with minimal loss on clean data. Feature squeezing provides a strong low-cost mitigation suitable for real-time or edge deployments, while defensive distillation offers moderate resilience.</p>
+                
+                <div class="use-case-box">
+                    <h4>Real-World Use Case: Electric Vehicle (EV) Charging Networks</h4>
+                    <p>Beyond academic validation, the project is extended to a <strong>real-world use case: Electric Vehicle (EV) charging networks</strong>. By mapping IDS features and adversarial threat models to Open Charge Point Protocol (OCPP) traffic, the work demonstrates how adversarially hardened IDS can protect against stealthy manipulation of billing, availability, and load-balancing messages—directly supporting smart grid stability and critical infrastructure security.</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>Strategic Value</h4>
+                    <p>This project delivers a practical blueprint for adversarially robust IDS design, combining empirical rigor with deployable defenses. It aligns with emerging research-security and critical-infrastructure protection priorities by explicitly addressing adversarial AI risks in cyber-physical and energy–mobility systems.</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Highlighted Projects for Visiting Collaborative Researcher | Cyber Security Specialist & AI Expert</p>
+            <p>Specializing in Threat Intelligence, AI Security, Adversarial Machine Learning, and Research Compliance</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Highlight current project on scroll
+        const projects = document.querySelectorAll('.project');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.backgroundColor = '#f8fafc';
+                    setTimeout(() => {
+                        entry.target.style.backgroundColor = '';
+                    }, 1000);
+                }
+            });
+        }, observerOptions);
+        
+        projects.forEach(project => {
+            observer.observe(project);
+        });
+    </script>
+</body>
+</html>

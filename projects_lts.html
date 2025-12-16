@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlighted Projects for Lead Technical Specialist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .project {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        .project:last-child {
+            border-bottom: none;
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: #1e3c72;
+            margin-bottom: 5px;
+        }
+        
+        .project-number {
+            display: inline-block;
+            background-color: #1e3c72;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+        
+        .github-link {
+            background-color: #333;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .github-link:hover {
+            background-color: #1e3c72;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            color: #2a5298;
+            margin: 20px 0 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        h4 {
+            font-size: 1.2rem;
+            color: #3a6bc5;
+            margin: 15px 0 8px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .feature-card {
+            background-color: #f8f9fa;
+            border-left: 4px solid #2a5298;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .highlight-box {
+            background-color: #e8f4fd;
+            border: 1px solid #c1dbf7;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .comparison-table th {
+            background-color: #1e3c72;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .comparison-table td {
+            padding: 12px;
+            border: 1px solid #eaeaea;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .tool-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .tool-item {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #eaeaea;
+        }
+        
+        .tool-item h4 {
+            margin-top: 0;
+        }
+        
+        .tag {
+            display: inline-block;
+            background-color: #e8f4fd;
+            color: #2a5298;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .project-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .github-link {
+                margin-top: 10px;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tool-list {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #eaeaea;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Highlighted Projects for Lead Technical Specialist</h1>
+            <p class="subtitle">Comprehensive portfolio showcasing cybersecurity, threat intelligence, GRC, and AI/ML projects</p>
+        </header>
+        
+        <div class="content">
+            <!-- Project 1.1 -->
+            <div class="project" id="lts1.1">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">1.1</span>
+                        <h2>Threat Intelligence Automation Framework</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/threat-intelligence-automation-framework" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <p>This repository features three modular, end-to-end solutions designed to operationalize threat intelligence workflows effectively:</p>
+                
+                <ul>
+                    <li><strong>Real-Time OSINT Dashboard</strong> — Aggregates and visualizes real-time OSINT threat indicators using MISP, SQLite, Dash, and enrichment via VirusTotal and AbuseIPDB.</li>
+                    <li><strong>Unified Threat Feed Ingestion & TTP Mapping System</strong> — Automates ingestion, normalization to STIX 2.1, MITRE ATT&CK-based enrichment, and structured reporting.</li>
+                    <li><strong>Simulated OSINT Coordination Exercise</strong> - Tabletop cyber exercise showcasing coordinated OSINT-driven ransomware response simulation.</li>
+                </ul>
+                
+                <h3>Objectives</h3>
+                <ul>
+                    <li>Integrate structured and unstructured threat intelligence feeds from MISP.</li>
+                    <li>Enrich indicators with AbuseIPDB, VirusTotal, and MITRE ATT&CK.</li>
+                    <li>Normalize events to STIX 2.1 for interoperability.</li>
+                    <li>Visualize threat patterns and map IOCs to adversarial TTPs.</li>
+                    <li>Provide extensible pipelines for SOCs and researchers.</li>
+                </ul>
+                
+                <h4>1 Real-Time OSINT Dashboard</h4>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Features</h4>
+                        <ul>
+                            <li>Data Sources: CIRCL MISP OSINT Feed</li>
+                            <li>Enrichment: VirusTotal API (malware analysis) & AbuseIPDB (IP reputation)</li>
+                            <li>Storage: SQLite</li>
+                            <li>Visualization: Dash-based threat type distribution, geo-maps, time series</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Ideal For</h4>
+                        <ul>
+                            <li>SOCs: Real-time monitoring.</li>
+                            <li>Researchers: Trend analysis.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h4>2 Unified Threat Feed Ingestion & TTP Mapping</h4>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Features</h4>
+                        <ul>
+                            <li>STIX 2.1 Conversion: Normalize MISP events.</li>
+                            <li>TTP Mapping: MITRE ATT&CK technique matching.</li>
+                            <li>Automation: Cron/systemd scheduling.</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Ideal For</h4>
+                        <ul>
+                            <li>CTI Teams: Campaign analysis.</li>
+                            <li>Threat Hunters: IOC contextualization.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h4>3 Simulated OSINT Coordination Exercise</h4>
+                <p>A tabletop cyber exercise demonstrating multi-sector coordination in detecting and responding to a simulated ransomware campaign. Built around the Threat Intelligence Automation Framework, this scenario evaluates OSINT ingestion, enrichment, STIX/TAXII sharing, and collaborative triage across academic, government, and private entities.</p>
+                
+                <div class="highlight-box">
+                    <h4>Key Highlights</h4>
+                    <ul>
+                        <li>Cross-sector stakeholders: Academia, Government, Private Sector, Intelligence Vendors</li>
+                        <li>Realistic threat scenario based on phishing and malicious PDFs</li>
+                        <li>Dashboard-enabled coordination using MITRE ATT&CK and IOC enrichment tools</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Project 1.2 -->
+            <div class="project" id="lts1.2">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">1.2</span>
+                        <h2>Threat & Risk Assessment (TRA) Tracker</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/threat-risk-assessment-tracker" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <p>A streamlined, interactive web application to manage Threat and Risk Assessments (TRA), which is built with Streamlit. This end-to-end application to streamline threat vector analysis, risk assessment scoring, SLA monitoring, and mitigation tracking. Designed for security teams, analysts, and compliance officers, this tracker brings together CVSS-based scoring, SLA breach detection, and interactive dashboards, all integrated into a lightweight and easily deployable system.</p>
+                
+                <h3>Key Features</h3>
+                
+                <h4>Submit New TRA</h4>
+                <ul>
+                    <li>Define asset, and owner.</li>
+                    <li>Select or define custom threat vectors.</li>
+                    <li>Evaluate Likelihood and Impact using CVSS-like scoring.</li>
+                    <li>Assign NIST SP 800-53 mitigation controls.</li>
+                    <li>Auto-calculates risk score and stores entry in SQLite database.</li>
+                    <li>Track risk status (Open, Mitigated, Critical).</li>
+                </ul>
+                
+                <h4>TRA Dashboard Outcomes</h4>
+                <p>Gain actionable intelligence via rich, interactive dashboards:</p>
+                <ul>
+                    <li>Threat Vector Analysis</li>
+                    <li>Mitigation Control Analysis</li>
+                    <li>Temporal Risk Trends</li>
+                    <li>Summary Statistics</li>
+                </ul>
+                
+                <h4>CISO Summary & SLA Monitoring</h4>
+                <ul>
+                    <li>Automatically detects TRAs breaching the 30-day SLA threshold.</li>
+                    <li>Lists Overdue entries and highlights Critical (Score ≥ 8.5) items.</li>
+                    <li>Generates a CISO Summary PDF Report with:
+                        <ul>
+                            <li>Top 5 critical risks</li>
+                            <li>Mitigation descriptions</li>
+                            <li>Time-stamped control mappings</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Project 1.3 -->
+            <div class="project" id="lts1.3">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">1.3</span>
+                        <h2>Threat Intelligence Platform & Real-Time Dashboard for Healthcare</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/healthcare-tip" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <h3>Why Healthcare Needs Threat Intelligence</h3>
+                <p>In today's digital age, healthcare organizations are among the most targeted sectors by cybercriminals. The sensitivity of Protected Health Information (PHI), the adoption of connected medical devices, and the increasing complexity of IT systems make healthcare a prime target for cyber threats.</p>
+                
+                <p>To tackle this challenge, we designed a Threat Intelligence Platform (TIP) paired with a Real-Time Dashboard—a unified system that empowers security teams to proactively detect, analyze, and respond to threats targeting healthcare systems.</p>
+                
+                <h3>Project Overview</h3>
+                <p>The platform is a modular, open-source solution specifically built to serve the needs of healthcare institutions. It aggregates global cyber threat data, enriches it with context, maps it to adversarial behaviors, and visualizes emerging risks in real time—all in one place.</p>
+                
+                <h3>Key Features</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Automated Threat Feed Ingestion</h4>
+                        <p>Continuously pulls open-source intelligence (OSINT) from global threat databases such as CIRCL and Botvrij.eu.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Context-Aware Threat Enrichment</h4>
+                        <p>Integrates with services like VirusTotal and GreyNoise to enrich indicators of compromise (IOCs) with real-world context.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>MITRE ATT&CK Mapping</h4>
+                        <p>Links threat patterns to known adversary tactics, techniques, and procedures for meaningful behavior analysis.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Risk-Based Scoring Engine</h4>
+                        <p>Computes risk scores based on severity levels (e.g., CVSS) and proximity to PHI infrastructure.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Real-Time Visualization</h4>
+                        <p>Presents threat insights through a live dashboard tailored for healthcare threat analysts and executives.</p>
+                    </div>
+                </div>
+                
+                <h3>Workflow at a Glance</h3>
+                <ol>
+                    <li><strong>MISP Setup:</strong> A dedicated MISP instance is deployed using Docker, configured to pull open threat feeds such as CIRCL and Botvrij.eu. And extract healthcare-related events from these MISP feeds.</li>
+                    <li><strong>Connection Initialization:</strong> The platform establishes a secure link with MISP to fetch recent threat events and associated attributes.</li>
+                    <li><strong>Local Data Storage:</strong> A lightweight SQLite database is initialized to store, normalize, and correlate threat data.</li>
+                    <li><strong>Data Ingestion:</strong> The ingestion pipeline collects structured (STIX) and unstructured data, including HIPAA breach disclosures.</li>
+                    <li><strong>Threat Enrichment:</strong> Each indicator is contextually enriched using open APIs like VirusTotal (file/malware reputation) and GreyNoise (noise vs. targeted scans).</li>
+                    <li><strong>TTP Mapping & Scoring:</strong> Indicators are mapped to MITRE ATT&CK tactics and scored based on severity and potential PHI impact.</li>
+                    <li><strong>Real-Time Threat Monitoring:</strong> A user-friendly Streamlit dashboard presents a live view of current threats, high-risk IOCs, and incident trends.</li>
+                </ol>
+            </div>
+            
+            <!-- Project 1.4 -->
+            <div class="project" id="lts1.4">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">1.4</span>
+                        <h2>Vulnerability Response Manager (VRM) App</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/vulnerability-response-manager" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <h3>Overview</h3>
+                <p>The Vulnerability Response Manager (VRM) App is a ServiceNow-based solution designed to efficiently manage security vulnerabilities detected by ZAP Vulnerability Scanner. The application automates the ingestion of vulnerability data, dynamically calculates risk scores, and provides intuitive reporting dashboards for effective remediation.</p>
+                
+                <h3>Features</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Data Ingestion</h4>
+                        <p>Fetch vulnerability data from ZAP via REST API.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Structured Vulnerability Database</h4>
+                        <p>Store and organize vulnerability information in ServiceNow.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Risk-Based Prioritization</h4>
+                        <p>Calculate risk scores dynamically using severity and confidence levels.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Comprehensive Reporting</h4>
+                        <p>Generate insights through dashboards and reports.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 1.5 -->
+            <div class="project" id="lts1.5">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">1.5</span>
+                        <h2>Automated Threat Detection for Smart Buildings and IoT Networks</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/automated-threat-detection" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <h3>Overview</h3>
+                <p>This repository contains two comprehensive guides for implementing automated threat detection systems in different environments:</p>
+                
+                <ol>
+                    <li><strong>Securing Smart Buildings: Automated Threat Detection & Mitigation</strong> — Focuses on large-scale commercial buildings with complex IoT ecosystems, featuring AI-driven behavioral analysis and integration with building management systems.</li>
+                    <li><strong>Lightweight Automated Threat Detection and Mitigation for IoT Networks</strong> — Provides cost-effective solutions for constrained environments using optimized open-source tools and minimal hardware requirements.</li>
+                </ol>
+                
+                <h3>Guide Comparison</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Smart Building Solution</th>
+                            <th>Lightweight IoT Solution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Target Environment</td>
+                            <td>Commercial high-rises, campuses</td>
+                            <td>Smart homes, small offices</td>
+                        </tr>
+                        <tr>
+                            <td>Hardware Requirements</td>
+                            <td>Edge processors, cloud AI</td>
+                            <td>Raspberry Pi, repurposed PCs</td>
+                        </tr>
+                        <tr>
+                            <td>Key Technologies</td>
+                            <td>PyTorch, Splunk, MITRE ATT&CK</td>
+                            <td>Zeek, Suricata, Grafana</td>
+                        </tr>
+                        <tr>
+                            <td>Detection Approach</td>
+                            <td>Behavioral AI models</td>
+                            <td>Protocol anomaly detection</td>
+                        </tr>
+                        <tr>
+                            <td>Response Capabilities</td>
+                            <td>Automated device isolation</td>
+                            <td>Rate limiting, IP bans</td>
+                        </tr>
+                        <tr>
+                            <td>Compliance Support</td>
+                            <td>ISO 27001, NIST SP 800-82, GDPR</td>
+                            <td>Basic traffic logging</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Key Features</h3>
+                
+                <h4>Smart Building Guide</h4>
+                <ul>
+                    <li>Hierarchical AI architecture (edge + core)</li>
+                    <li>Cross-system correlation rules (elevator + badge + camera)</li>
+                    <li>Compliance integration for critical infrastructure</li>
+                    <li>Case study with 92% detection accuracy</li>
+                </ul>
+                
+                <h4>Lightweight IoT Guide</h4>
+                <ul>
+                    <li>Resource-optimized tools (Zeek Light, BusyBox)</li>
+                    <li>Step-by-step attack simulations (CoAP/MQTT exploits)</li>
+                    <li>iptables/Zeek scripting for mitigation</li>
+                    <li>Works on devices with as little as 128MB RAM</li>
+                </ul>
+                
+                <h4>Securing Smart Buildings: Automated Threat Detection & Mitigation</h4>
+                <p><strong>Enterprise-Grade Protection for Critical Infrastructure</strong></p>
+                <p>From access-controlled elevators to automated lighting, HVAC, and surveillance systems, today's commercial buildings are digitally connected ecosystems. But these same systems—IoT cameras, badge readers, smart thermostats—can be exploited by cybercriminals.</p>
+                <p>When every device is connected, every device becomes a potential entry point. Thus modern buildings require advanced security that evolves with emerging threats. That's where automated threat detection and mitigation becomes essential. This expanded guide details comprehensive protection systems.</p>
+                
+                <h4>Lightweight Automated Threat Detection and Mitigation for IoT Networks</h4>
+                <p><strong>Cost-Effective Security for Constrained Environments</strong></p>
+                <p>Even basic smart homes face sophisticated cyber threats. This guide expands on implementing robust protection without enterprise-grade resources.</p>
+            </div>
+            
+            <!-- Project 1.6 -->
+            <div class="project" id="lts1.6">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">1.6</span>
+                        <h2>RiskShield: Proactive Risk Management for Cybersecurity</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/risk-management-cybersecurity" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <h3>Project Overview</h3>
+                <p>RiskShield is an automated risk assessment and management system designed to systematically identify, evaluate, visualize, and manage risks derived from security assessments. The platform seamlessly processes vulnerability scan results, prioritizes security threats using advanced analytics and clustering algorithms, and offers interactive visualizations through an intuitive dashboard. Actionable reports, coupled with strategic recommendations, timelines, and assigned responsibilities, enable informed and efficient decision-making. It supports JSON and CSV outputs for easy integration with other tools. Ideal for cybersecurity teams, this solution streamlines vulnerability management, enhances decision-making, and ensures proactive risk mitigation in dynamic IT environments.</p>
+            </div>
+            
+            <!-- Project 1.7 -->
+            <div class="project" id="lts1.7">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">1.7</span>
+                        <h2>Scalable and Efficient GRC Framework for Cybersecurity</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/GRC-Framework" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <h3>Overview</h3>
+                <p>This project demonstrates the design, development, and implementation of a scalable Governance, Risk, and Compliance (GRC) framework using the ServiceNow Developer Platform. The solution enhances compliance, risk management, and governance in an organizational setting, leveraging structured tables, forms, dashboards, and automation workflows.</p>
+                
+                <h3>Key Features</h3>
+                
+                <h4>Comprehensive Data Structure:</h4>
+                <ul>
+                    <li>Asset, Policy, Risk, Control, Compliance, and Audit tables.</li>
+                    <li>Lookup tables for streamlined operations and categorization.</li>
+                </ul>
+                
+                <h4>Custom Workspaces:</h4>
+                <ul>
+                    <li>User-friendly forms for data input and management.</li>
+                    <li>Visual widgets for intuitive and real-time insights.</li>
+                </ul>
+                
+                <h4>Dashboards:</h4>
+                <ul>
+                    <li><strong>Risk Dashboard:</strong> Displays analytics related to identified risks and mitigation efforts.</li>
+                    <li><strong>Policy Dashboard:</strong> Monitors policy management and version history.</li>
+                    <li><strong>Compliance Dashboard:</strong> Provides a snapshot of organizational compliance status.</li>
+                </ul>
+                
+                <h4>Automation:</h4>
+                <p>Automated workflows for:</p>
+                <ul>
+                    <li><strong>Risk level computation:</strong> Evaluates risks dynamically.</li>
+                    <li><strong>Policy version control:</strong> Manages versioning and tracks updates.</li>
+                    <li><strong>Compliance evaluation:</strong> Determines compliance levels based on scores.</li>
+                    <li><strong>Notifications:</strong> Alerts users about policy status changes and updates.</li>
+                </ul>
+            </div>
+            
+            <!-- Project 1.8 -->
+            <div class="project" id="lts1.8">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">1.8</span>
+                        <h2>Fraud Detection in e-Commerce</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/FraudDetection" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <p>This repository contains a comprehensive Python-based analysis and machine learning workflow for detecting fraudulent activities among customers based on their transaction details and customer profiles. The project involves data loading, preprocessing, exploratory data analysis, feature engineering, and the application of various machine learning models to identify potential fraud.</p>
+                
+                <h3>Overview</h3>
+                <p>The project is structured into a single, detailed script that covers the following key steps:</p>
+                
+                <ul>
+                    <li><strong>Data Loading:</strong> Importing customer profile and transaction datasets.</li>
+                    <li><strong>Data Preprocessing:</strong> Cleaning data, handling missing values, and renaming columns for better readability.</li>
+                    <li><strong>Exploratory Data Analysis (EDA):</strong> Analyzing the datasets to understand the underlying patterns, including counting unique values and plotting various distributions.</li>
+                    <li><strong>Feature Engineering:</strong> Creating new features that can help in the detection of fraudulent activities, such as the total transaction amount, average transaction amount, and counts of failed transactions.</li>
+                    <li><strong>Model Training and Evaluation:</strong> Training machine learning models like Support Vector Machines (SVM), Decision Trees, Random Forests, and XGBoost, and evaluating their performance in detecting fraud.</li>
+                    <li><strong>Model Tuning:</strong> Fine-tuning models using GridSearchCV and RandomizedSearchCV to improve performance.</li>
+                    <li><strong>Visualization:</strong> Visualizing data distributions, feature correlations, and model performance metrics to gain insights.</li>
+                </ul>
+            </div>
+            
+            <!-- Project 1.9 -->
+            <div class="project" id="lts1.9">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">1.9</span>
+                        <h2>Context-Aware Behavioral SOAR System</h2>
+                    </div>
+                    <div></div> <!-- Empty div for alignment -->
+                </div>
+                
+                <p><strong>Context-Aware Behavioral SOAR (Security Orchestration, Automation & Response) System</strong> is a next-generation, risk-adaptive orchestration platform designed to transform security operations by reducing noise, improving analyst efficiency, and ensuring complete auditability of incident response. It integrates detection, enrichment, risk scoring, automation, and validation into a closed-loop response fabric tailored for modern threat environments.</p>
+                
+                <h3>Core Concept</h3>
+                <p>The system ingests <strong>Wazuh alerts</strong> and enriches them with both <strong>external threat intelligence</strong> (VirusTotal, AbuseIPDB, MISP, Shodan, GreyNoise) and <strong>internal business context</strong> (asset criticality, identity risk, and anomaly scores). A <strong>composite risk score</strong> (0.4·Threat Intel + 0.4·Asset Criticality + 0.2·Anomaly) determines whether an event is promoted into PostgreSQL-based incident storage and visualized in <strong>Grafana</strong>, suppressing noise while focusing on high-value threats.</p>
+                
+                <h3>Key Capabilities</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Context-aware triage</h4>
+                        <p>Risk-driven event promotion using dynamic thresholds to adapt during alert storms.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Bi-directional automation</h4>
+                        <p>Firewall blocks, Okta/Entra session revocations, and DB freezes, followed by validation with <strong>Loki, Wazuh, and Nmap</strong>.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Proactive threat hunting</h4>
+                        <p>Daily IoC enrichment and hunting boards surfaced via dashboards.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Full traceability</h4>
+                        <p>Every enrichment, decision, and action logged in PostgreSQL and mirrored to Loki/Wazuh.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Operational visibility</h4>
+                        <p>Grafana dashboards covering incident flow, KPIs (MTTD/MTTR), hunting status, and system health.</p>
+                    </div>
+                </div>
+                
+                <h3>Deployment & Architecture</h3>
+                <p>The system supports both <strong>single-host PoC deployments</strong> and <strong>hardened two-VM production setups</strong>:</p>
+                <ul>
+                    <li><strong>VM-A:</strong> Wazuh, Loki, Promtail (detection and log management).</li>
+                    <li><strong>VM-B:</strong> Shuffle SOAR, PostgreSQL, Grafana, with optional Nmap/YARA.<br>Collaboration occurs through <strong>Slack interactive approvals</strong> or an optional analyst portal, ensuring secure, role-based engagement.</li>
+                </ul>
+                
+                <h3>Strategic Value</h3>
+                <ul>
+                    <li><strong>Efficiency gains:</strong> Cuts promoted alert volume by 30%+ and improves detection/response times by at least 25%.</li>
+                    <li><strong>Governance & compliance:</strong> End-to-end traceability, GDPR/DPO notifications, and strict least-privilege design.</li>
+                    <li><strong>Scalability:</strong> Modular deployments from PoC to production with dynamic policy-driven risk tuning.</li>
+                </ul>
+                
+                <h3>Success Metrics</h3>
+                <ul>
+                    <li>≥30% reduction in alert noise week-over-week.</li>
+                    <li>≥25% improvement in median MTTD/MTTR.</li>
+                    <li>≥95% of automated actions validated within 15 minutes.</li>
+                    <li>&lt;2% enrichment/API error rate per 24 hours.</li>
+                </ul>
+                
+                <h3>Conclusion</h3>
+                <p>The Context-Aware Behavioral SOAR System delivers a <strong>high-fidelity, low-noise, and fully auditable incident response fabric</strong> that bridges automation, behavioral context, and analyst oversight. By combining proactive hunting, closed-loop validation, and compliance-centric auditing, it equips organizations with a future-ready security operations platform that scales seamlessly across environments.</p>
+            </div>
+            
+            <!-- Project 1.10 -->
+            <div class="project" id="lts1.10">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">1.10</span>
+                        <h2>End-to-End Threat Detection, Response, and Hunting with Microsoft SIEM/XDR</h2>
+                    </div>
+                    <div></div> <!-- Empty div for alignment -->
+                </div>
+                
+                <p>This project establishes a <strong>progressive, end-to-end defense capability</strong> for SMEs using Microsoft Sentinel (SIEM) and Microsoft Defender (XDR). It unifies log collection, detection, automated response, and proactive hunting into a cost-controlled, scalable framework.</p>
+                
+                <h3>Core Components</h3>
+                
+                <h4>1. Unified Log Collection (Sentinel)</h4>
+                <ul>
+                    <li>Centralizes logs from Microsoft 365 Defender, Azure AD, and endpoints.</li>
+                    <li>Integrates at least one non-Microsoft log source (e.g., firewall/VPN) for broader visibility.</li>
+                    <li>Implements analytic rules for high-value detections: <em>impossible travel, brute-force logins, ransomware behaviors</em>.</li>
+                </ul>
+                
+                <h4>2. Automated Endpoint Response (Defender for Endpoint)</h4>
+                <ul>
+                    <li>Enables attack surface reduction (e.g., blocking Office macros).</li>
+                    <li>Configures Automated Investigation & Remediation (AIR) to isolate devices, block malicious processes, and quarantine files.</li>
+                    <li>Demonstrates reduced dwell time through validation of simulated attacks (e.g., obfuscated PowerShell).</li>
+                </ul>
+                
+                <h4>3. Proactive Threat Hunting (Defender XDR + Sentinel)</h4>
+                <ul>
+                    <li>Develops hunting scenarios tied to SME business risks (e.g., phishing targeting finance teams).</li>
+                    <li>Correlates email, identity, and endpoint activity through KQL hunting queries.</li>
+                    <li>Documents findings in repeatable Threat Hunting Playbooks.</li>
+                </ul>
+                
+                <h3>Strategic Value</h3>
+                <ul>
+                    <li>Establishes a <strong>lean yet comprehensive SOC capability</strong> for SMEs.</li>
+                    <li>Improves visibility across domains (identity, email, endpoints).</li>
+                    <li>Reduces operational overhead by automating high-severity responses.</li>
+                    <li>Supports progressive maturity: start with visibility → add response → expand into hunting.</li>
+                </ul>
+                
+                <h3>Outcomes</h3>
+                <ul>
+                    <li>Cost-effective SIEM baseline with automated playbooks.</li>
+                    <li>Rapid incident isolation and remediation at the endpoint level.</li>
+                    <li>Proactive detection of multi-stage attacks before business impact.</li>
+                </ul>
+            </div>
+            
+            <!-- Project 1.11 -->
+            <div class="project" id="lts1.11">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">1.11</span>
+                        <h2>Leveraging Microsoft Sentinel & Defender to Protect Compromised Identities, Phishing, and Ransomware</h2>
+                    </div>
+                    <div></div> <!-- Empty div for alignment -->
+                </div>
+                
+                <p>This <strong>30-day SME-focused sprint</strong> delivers a functional, integrated defense posture using Microsoft Sentinel and Defender, designed to maximize existing Microsoft 365 investments. It builds foundational coverage against the top three SME threats—compromised identities, phishing, and ransomware—while minimizing operational complexity.</p>
+                
+                <h3>Core Modules</h3>
+                
+                <h4>1. Identity Threat Detection (Digital Front Door)</h4>
+                <ul>
+                    <li>Connects Entra ID sign-in and audit logs to Sentinel.</li>
+                    <li>Activates rules for impossible travel, suspicious sign-ins, and brute-force attempts.</li>
+                    <li>Provides real-time alerts via Teams/email for immediate remediation.</li>
+                </ul>
+                
+                <h4>2. Automated Phishing Response (Email Shield)</h4>
+                <ul>
+                    <li>Integrates alerts from Defender for Office 365 and Defender for Endpoint.</li>
+                    <li>Automates URL/IP blocklisting across endpoints when phishing is detected.</li>
+                    <li>Contains phishing campaigns within minutes by protecting the entire organization.</li>
+                </ul>
+                
+                <h4>3. Proactive Ransomware Hunting (Internal Watchdog)</h4>
+                <ul>
+                    <li>Uses Defender endpoint telemetry within Sentinel.</li>
+                    <li>Deploys scheduled queries for lateral movement and privilege escalation.</li>
+                    <li>Provides early visibility into attacker behaviors before encryption occurs.</li>
+                </ul>
+                
+                <h3>Implementation Roadmap</h3>
+                <ul>
+                    <li><strong>Week 1:</strong> Setup Sentinel workspace and data connectors.</li>
+                    <li><strong>Week 2:</strong> Configure identity analytics rules and alerting.</li>
+                    <li><strong>Week 3:</strong> Deploy phishing response playbook and train IT staff.</li>
+                    <li><strong>Week 4:</strong> Implement ransomware hunting queries and deliver final runbook.</li>
+                </ul>
+                
+                <h3>Strategic Value</h3>
+                <ul>
+                    <li><strong>Maximizes existing Microsoft licenses</strong> (M365 Business Premium/E3).</li>
+                    <li>Provides <strong>high-impact wins quickly</strong>, without requiring 24/7 SOC staffing.</li>
+                    <li>Creates a <strong>foundation for security maturity growth</strong>.</li>
+                </ul>
+                
+                <h3>Outcomes</h3>
+                <ul>
+                    <li>Automated identity monitoring and phishing containment.</li>
+                    <li>Proactive visibility into ransomware precursors.</li>
+                    <li>An integrated SIEM/XDR framework operational in under 30 days.</li>
+                </ul>
+            </div>
+            
+            <!-- Project 1.12 -->
+            <div class="project" id="lts1.12">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">1.12</span>
+                        <h2>Age Bias Detection and Mitigation Strategies for Credit Decision Making</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/bias_mitigation_credit_scores" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <p>This project focuses on detecting and mitigating age-related bias in credit decision-making using machine learning models. Bias in automated credit scoring can lead to unfair decisions, especially regarding sensitive attributes like age. The goal is to assess and mitigate age bias in predictive models built using the German Credit dataset and improve the fairness of credit decisions across different age groups.</p>
+                
+                <h3>Problem Statement</h3>
+                <p>In financial decision-making, such as loan approvals, biased models can negatively impact specific groups of individuals. This project aims to explore how age bias affects credit decision models and implement bias mitigation strategies to promote fairer outcomes. We analyze the disparity between the privileged group (age ≥ 25) and the unprivileged group (age < 25) in the model's decisions.</p>
+                
+                <h3>Methodology</h3>
+                
+                <h4>1. Bias Detection</h4>
+                <ul>
+                    <li>We begin by training machine learning models (Logistic Regression and Random Forest) on the dataset without applying any bias mitigation techniques.</li>
+                    <li>Fairness metrics such as Disparate Impact, Average Odds Difference, Equal Opportunity Difference, and Statistical Parity Difference are computed to evaluate the presence of bias based on the protected attribute: Age.</li>
+                </ul>
+                
+                <h4>2. Bias Mitigation (Reweighing)</h4>
+                <ul>
+                    <li>After detecting bias, we apply the Reweighing technique (a pre-processing bias mitigation algorithm). This technique adjusts the weights of the training data to balance the outcomes for privileged and unprivileged groups.</li>
+                    <li>We retrain the models using the transformed dataset and reassess bias using the same fairness metrics.</li>
+                </ul>
+                
+                <h4>3. Model Evaluation</h4>
+                <ul>
+                    <li>The models are evaluated both for accuracy and fairness. We compare the performance before and after bias mitigation to assess the effectiveness of the reweighing technique.</li>
+                    <li>The fairness metrics are computed on both the original and transformed datasets to measure the change in bias.</li>
+                </ul>
+                
+                <h3>Results</h3>
+                <ul>
+                    <li><strong>Without Bias Mitigation:</strong> Initial analysis shows that the privileged group (age ≥ 25) received more favorable credit outcomes compared to the unprivileged group (age < 25).</li>
+                    <li><strong>With Bias Mitigation (Reweighing):</strong> After applying the reweighing technique, there was a notable improvement in fairness metrics, such as Disparate Impact and Equal Opportunity Difference, while maintaining a comparable level of model accuracy.</li>
+                </ul>
+            </div>
+            
+            <!-- Project 1.13 -->
+            <div class="project" id="lts1.13">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">1.13</span>
+                        <h2>Governance, Risk, and Compliance (GRC) Project</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/GRC-Project" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <h3>Overview</h3>
+                <p>This project demonstrates the implementation of a comprehensive GRC framework to help organizations align with key regulatory requirements (e.g., SOC2, ISO27001, GDPR, CCPA). It includes tools, templates, and scripts for developing, implementing, and maintaining GRC policies, procedures, and controls.</p>
+                <p>The project also covers risk assessments, security and privacy audits, and vendor risk management, ensuring adherence to industry standards and regulatory changes.</p>
+                
+                <h3>Features</h3>
+                
+                <h4>1. Policy and Procedure Development</h4>
+                <ul>
+                    <li>Various Templates for GRC policies and procedures.</li>
+                    <li>Example controls aligned with SOC2, ISO27001, GDPR, and CCPA.</li>
+                    <li>Automated scripts for generating and updating policy documents.</li>
+                </ul>
+                
+                <h4>2. Security and Privacy Audits</h4>
+                <ul>
+                    <li>Audit checklist templates for SOC2 and ISO27001.</li>
+                    <li>Scripts to automate common audit processes (e.g., access control reviews).</li>
+                    <li>Reporting dashboards for audit results and compliance gaps.</li>
+                </ul>
+                
+                <h4>3. Risk Assessment Framework</h4>
+                <ul>
+                    <li>Tools for identifying, evaluating, and mitigating organizational risks.</li>
+                    <li>Sample risk register template with example entries.</li>
+                    <li>Code for scoring and prioritizing risks based on likelihood and impact.</li>
+                </ul>
+                
+                <h4>4. Cross-Departmental Collaboration</h4>
+                <ul>
+                    <li>Guidelines for implementing controls across IT, HR, Legal, and Operations.</li>
+                    <li>Workflow automation scripts to manage security incidents and corrective actions.</li>
+                </ul>
+                
+                <h4>5. GRC Management System</h4>
+                <ul>
+                    <li>Centralized system for tracking compliance efforts and risk management.</li>
+                    <li>Sample database schema for managing GRC-related data.</li>
+                    <li>Scripts for generating progress reports for senior leadership.</li>
+                </ul>
+                
+                <h4>6. Vendor Risk Management</h4>
+                <ul>
+                    <li>Questionnaire templates for assessing vendor security and privacy practices.</li>
+                    <li>Automation tools for sending and analyzing vendor risk assessments.</li>
+                </ul>
+                
+                <h4>7. Regulatory Updates and Best Practices</h4>
+                <ul>
+                    <li>Scripts for monitoring regulatory changes and industry updates.</li>
+                    <li>Notification system for alerting stakeholders to relevant changes.</li>
+                </ul>
+            </div>
+            
+            <!-- Project 1.14 -->
+            <div class="project" id="lts1.14">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">1.14</span>
+                        <h2>Open-Source GRC Tools</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/GRC-Tools" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <h3>Overview</h3>
+                <p>This document highlights notable open-source GRC tools and GitHub projects designed to enhance Governance, Risk, and Compliance (GRC) efforts as well as support Incident Response and Security Operations. These tools cater to organizations aiming to streamline compliance processes, improve incident response capabilities, and ensure alignment with security frameworks like SOC 2, ISO 27001, and GDPR.</p>
+                
+                <h3>Curated List of Open-Source GRC Tools</h3>
+                
+                <div class="tool-list">
+                    <div class="tool-item">
+                        <h4>1. Eramba</h4>
+                        <p><strong>Description:</strong> An open-source GRC software that provides a comprehensive suite of tools for governance, risk management, and compliance. Eramba offers a community-driven repository of GRC templates, including compliance frameworks, policies, internal controls, and questionnaires, all available under a Creative Commons license. Ideal for organizations with specific ISO/GDPR compliance needs.</p>
+                        <p><strong>Key Features:</strong> Policy management and compliance templates, risk management (risk registers, mitigation tracking), incident and exception handling.</p>
+                        <p><strong>Frameworks:</strong> ISO 27001, PCI DSS, GDPR.</p>
+                        <p><strong>Website:</strong> eramba.org</p>
+                    </div>
+                    
+                    <div class="tool-item">
+                        <h4>2. TheHive</h4>
+                        <p><strong>Description:</strong> An open-source and free Security Incident Response Platform (SIRP). It assists Security Operations Centers (SOCs), Computer Security Incident Response Teams (CSIRTs), and security practitioners in efficiently investigating and responding to security incidents.</p>
+                        <p><strong>Key Features:</strong> Centralized incident tracking and response management, integration with various threat intelligence tools like MISP, case management with customizable workflows.</p>
+                        <p><strong>Website:</strong> thehive-project.org</p>
+                    </div>
+                    
+                    <div class="tool-item">
+                        <h4>3. GovReady-Q</h4>
+                        <p><strong>Description:</strong> A self-service, open-source GRC tool. It automates security assessments and compliance documentation.</p>
+                        <p><strong>Key Features:</strong> Support for frameworks like SOC 2, ISO 27001, GDPR, and others, emerging data standards for reusable compliance content, user-friendly interface for both technical and non-technical users.</p>
+                        <p><strong>Repository:</strong> GovReady-Q GitHub</p>
+                    </div>
+                    
+                    <div class="tool-item">
+                        <h4>4. OpenGRC (OCEG Compliant Framework)</h4>
+                        <p><strong>Description:</strong> An open-source tool for governance, risk, and compliance management that helps organizations implement OCEG principles. Best for smaller organizations or teams needing a lightweight GRC tool.</p>
+                        <p><strong>Key Features:</strong> Risk assessment and management, policy management with document tracking, integration with compliance frameworks.</p>
+                        <p><strong>Website:</strong> openrmf.io</p>
+                    </div>
+                    
+                    <div class="tool-item">
+                        <h4>5. SimpleRisk</h4>
+                        <p><strong>Description:</strong> A lightweight and flexible GRC platform focusing on risk management. Suitable for SMEs looking for straightforward risk tracking and compliance tools.</p>
+                        <p><strong>Key Features:</strong> Risk assessment and tracking, risk acceptance and mitigation workflows, optional compliance modules for standards like ISO 27001 and SOC 2.</p>
+                        <p><strong>Website:</strong> simplerisk.com</p>
+                    </div>
+                    
+                    <div class="tool-item">
+                        <h4>6. OpenRMF (Open Risk Management Framework)</h4>
+                        <p><strong>Description:</strong> An open-source Risk Management Framework tool focuses on managing NIST Risk Management Framework (RMF) compliance and assessments, which assists in managing security compliance data, generating compliance reports, and tracking system security status. OpenRMF provides features for checklist management, vulnerability tracking, and compliance documentation. Ideal for organizations in defense, government, or NIST-heavy environments.</p>
+                        <p><strong>Key Features:</strong> Automated compliance checklists for NIST 800-53 and related standards, workflow management for authorization and risk handling, reporting and dashboards for system assessments.</p>
+                        <p><strong>Website:</strong> openrmf.io</p>
+                    </div>
+                    
+                    <div class="tool-item">
+                        <h4>7. GraphGRC</h4>
+                        <p><strong>Description:</strong> A data-driven documentation tool connecting compliance frameworks. GraphGRC maps and organizes controls across frameworks like SOC 2, ISO 27001, and GDPR using the Secure Controls Framework (SCF).</p>
+                        <p><strong>Key Features:</strong> Visual representation of compliance control mappings, support for structured and reusable documentation, aligns security programs with business objectives.</p>
+                        <p><strong>Repository:</strong> GraphGRC GitHub</p>
+                    </div>
+                    
+                    <div class="tool-item">
+                        <h4>8. CISO Assistant</h4>
+                        <p><strong>Description:</strong> An open-source GRC platform designed to simplify the management of governance, risk, and compliance processes. CISO Assistant supports multiple cybersecurity frameworks and offers features for risk management, audit tracking, and compliance management. It is useful for organizations needing management of governance, risk, and compliance processes.</p>
+                        <p><strong>Key Features:</strong> Risk management, audit tracking, compliance management.</p>
+                        <p><strong>Website:</strong> CISO Assistant</p>
+                    </div>
+                    
+                    <div class="tool-item">
+                        <h4>9. SOC-OpenSource</h4>
+                        <p><strong>Description:</strong> A project integrating multiple open-source tools to create a comprehensive SOC environment. It enhances SOC operations with a modular approach to security information management and incident response.</p>
+                        <p><strong>Key Features:</strong> Elastic SIEM for security information and event management, TheHive for incident response, MISP for threat intelligence sharing.</p>
+                        <p><strong>Repository:</strong> SOC-OpenSource GitHub</p>
+                    </div>
+                    
+                    <div class="tool-item">
+                        <h4>10. OWASP Security Knowledge Framework (SKF)</h4>
+                        <p><strong>Description:</strong> Primarily aimed at security, OWASP SKF provides guidance for compliance as part of security assurance. It can be used for organizations focused on application security and related compliance.</p>
+                        <p><strong>Key Features:</strong> Knowledge base for secure development and compliance, tools for secure coding and compliance checks.</p>
+                        <p><strong>Website:</strong> owasp.org</p>
+                    </div>
+                    
+                    <div class="tool-item">
+                        <h4>11. GRR (Google Rapid Response)</h4>
+                        <p><strong>Description:</strong> Originally designed as an incident response tool, GRR can be adapted for compliance and risk monitoring. It can be used for security-centric organizations that require strong incident response as part of their GRC strategy.</p>
+                        <p><strong>Key Features:</strong> Distributed monitoring for security incidents, automated workflows for audits and evidence collection, real-time forensic data collection.</p>
+                        <p><strong>Website:</strong> grr.dev</p>
+                    </div>
+                    
+                    <div class="tool-item">
+                        <h4>12. OSSEC (Open Source Security Information and Event Management)</h4>
+                        <p><strong>Description:</strong> A scalable and open-source SIEM tool, which can be extended for compliance monitoring. It can be used for security-focused organizations needing compliance monitoring and log analysis.</p>
+                        <p><strong>Key Features:</strong> Real-time event log monitoring and alerting, auditing for compliance with standards like PCI DSS and ISO 27001, file integrity monitoring for critical systems.</p>
+                        <p><strong>Website:</strong> ossec.net</p>
+                    </div>
+                    
+                    <div class="tool-item">
+                        <h4>13. CalCom Hardening Suite</h4>
+                        <p><strong>Description:</strong> An open-source tool for security baseline and compliance management. It can be used for enterprises requiring system compliance and hardening at scale.</p>
+                        <p><strong>Key Features:</strong> Automates system hardening, provides compliance checks for frameworks like CIS, NIST, and PCI DSS, centralized management and reporting.</p>
+                        <p><strong>Website:</strong> calcomsoftware.com</p>
+                    </div>
+                    
+                    <div class="tool-item">
+                        <h4>14. Wazuh</h4>
+                        <p><strong>Description:</strong> A security platform that provides capabilities for monitoring compliance. It can be used for organizations needing real-time monitoring with compliance reporting capabilities.</p>
+                        <p><strong>Key Features:</strong> File integrity monitoring, real-time log analysis, pre-built templates for compliance reporting (e.g., PCI DSS, HIPAA).</p>
+                        <p><strong>Website:</strong> wazuh.com</p>
+                    </div>
+                    
+                    <div class="tool-item">
+                        <h4>15. Incident Response Playbook</h4>
+                        <p><strong>Description:</strong> An open-source guide for cybersecurity incident management. It provides structured, actionable steps for handling various security incidents.</p>
+                        <p><strong>Key Features:</strong> Phases include detection, containment, eradication, and recovery, includes automation scripts for incident response tasks, framework-agnostic and adaptable to organizational needs.</p>
+                        <p><strong>Repository:</strong> Incident Response Playbook GitHub</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 1.15 -->
+            <div class="project" id="lts1.15">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">1.15</span>
+                        <h2>GRC Tools Selection Criteria and Recommendations</h2>
+                    </div>
+                    <div></div> <!-- Empty div for alignment -->
+                </div>
+                
+                <h3>Overview</h3>
+                <p>This guide provides tailored recommendations and selection criteria to help organizations identify the most suitable open-source GRC tools based on their size, compliance requirements, and security focus.</p>
+                
+                <h3>Selection Criteria</h3>
+                
+                <h4>1. Organization Size</h4>
+                <ul>
+                    <li><strong>Small to Medium Enterprises (SMEs):</strong> Tools like SimpleRisk and OpenGRC offer lightweight and cost-effective solutions for smaller teams with limited budgets.</li>
+                    <li><strong>Large Enterprises:</strong> Wazuh, Eramba, and OpenRMF provide robust scalability and advanced features for larger organizations.</li>
+                </ul>
+                
+                <h4>2. Compliance Needs</h4>
+                <ul>
+                    <li><strong>Specific Frameworks:</strong> For ISO 27001, PCI DSS, or GDPR compliance, Eramba, GovReady-Q, and OpenRMF are excellent choices.</li>
+                    <li><strong>Broad Compliance:</strong> Tools like GraphGRC and Wazuh support multiple frameworks and provide templates for cross-framework compliance.</li>
+                </ul>
+                
+                <h4>3. Security Focus</h4>
+                <ul>
+                    <li><strong>Incident Response:</strong> TheHive, GRR, and SOC-OpenSource specialize in incident tracking, response, and forensic data collection.</li>
+                    <li><strong>System Hardening:</strong> CalCom Hardening Suite automates system hardening and compliance checks.</li>
+                    <li><strong>SIEM Integration:</strong> OSSEC and Wazuh provide robust SIEM capabilities alongside compliance monitoring.</li>
+                </ul>
+                
+                <h3>Recommendations</h3>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>1. Broad GRC Needs</h4>
+                        <p><strong>Recommended Tools:</strong> Eramba, GraphGRC, and GovReady-Q.</p>
+                        <p><strong>Why?</strong> These tools provide extensive compliance frameworks, policy management, and risk tracking, catering to organizations needing comprehensive governance, risk, and compliance management.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>2. Security-Centric GRC</h4>
+                        <p><strong>Recommended Tools:</strong> TheHive, GRR, OSSEC, and Wazuh.</p>
+                        <p><strong>Why?</strong> These tools focus on real-time security monitoring, incident response, and forensic analysis, making them ideal for security-heavy organizations.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>3. NIST Compliance</h4>
+                        <p><strong>Recommended Tools:</strong> OpenRMF and CalCom Hardening Suite.</p>
+                        <p><strong>Why?</strong> Both tools are specifically designed for managing NIST Risk Management Framework (RMF) compliance and related standards, providing automated workflows and checklists.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>4. Compliance-First Approach</h4>
+                        <p><strong>Recommended Tools:</strong> Eramba, GovReady-Q, and OpenGRC.</p>
+                        <p><strong>Why?</strong> These tools emphasize policy management, compliance templates, and audit tracking for organizations prioritizing compliance readiness.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>5. Developer/DevSecOps Teams</h4>
+                        <p><strong>Recommended Tools:</strong> OWASP Security Knowledge Framework (SKF) and GraphGRC.</p>
+                        <p><strong>Why?</strong> These tools provide developers with secure coding guidelines and frameworks, aligning security practices with development processes.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>6. SOC Operations</h4>
+                        <p><strong>Recommended Tools:</strong> SOC-OpenSource and Wazuh.</p>
+                        <p><strong>Why?</strong> These tools integrate modular solutions for threat intelligence, incident response, and log analysis, creating a comprehensive SOC environment.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>7. Lightweight GRC Tools</h4>
+                        <p><strong>Recommended Tools:</strong> SimpleRisk and OpenGRC.</p>
+                        <p><strong>Why?</strong> These tools are ideal for smaller teams and organizations needing straightforward risk and compliance management without heavy resource requirements.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 1.16 -->
+            <div class="project" id="lts1.16">
+                <div class="project-header" id="1.16">
+                    <div>
+                        <span class="project-number">1.16</span>
+                        <h2>GDPR Violations Analysis</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/GDPR" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <p>This project analyzes GDPR violations from 2019 using a dataset from Kaggle. It employs advanced data science, visualization, and text analysis techniques to derive actionable insights. The project includes an intuitive dashboard that showcases GDPR compliance trends, commonly violated articles, penalties imposed, and more.</p>
+                
+                <h3>Objectives</h3>
+                <ul>
+                    <li>Data Cleaning and Preparation</li>
+                    <li>Exploratory Data Analysis (EDA)</li>
+                    <li>Text Analysis</li>
+                    <li>Data Visualization</li>
+                </ul>
+            </div>
+            
+            <!-- Project 1.17 -->
+            <div class="project" id="lts1.17">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">1.17</span>
+                        <h2>CyberSecure Analytics Dashboard</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/cybersecure_analytics" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <p>The CyberSecure Analytics Dashboard is an interactive, Python-based application designed to streamline cybersecurity management tasks. It leverages advanced data analysis and visualization techniques to help security professionals detect, analyze, and mitigate threats effectively. Built using the Streamlit framework, the dashboard integrates open-source datasets and models to provide insights across multiple domains of cybersecurity.</p>
+                
+                <h3>Features</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Intrusion Detection System (IDS)</h4>
+                        <p>Detects and analyzes network intrusions using machine learning models.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Anomaly Detection</h4>
+                        <p>Identifies anomalous behavior in network traffic and system logs.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Indicators of Compromise (IoCs)</h4>
+                        <p>Tracks and analyzes indicators of compromise from various threat feeds.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>CVSS Analysis</h4>
+                        <p>Analyzes and visualizes Common Vulnerability Scoring System (CVSS) data.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 1.18 -->
+            <div class="project" id="lts1.18">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">1.18</span>
+                        <h2>AI-Driven ESG Risk Assessment and Fairness Evaluations</h2>
+                    </div>
+                    <a href="https://github.com/bnvaidya20/ai-esg-risk-assessment" class="github-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <p>This project leverages AI models to assess Environmental, Social, and Governance (ESG) risks and evaluates fairness metrics to ensure equitable decision-making in risk evaluations. The system utilizes Random Forest (RF), XGBoost, and Neural Networks (NN) to predict ESG risk levels and analyze feature importance and fairness metrics.</p>
+                
+                <h3>Project Features</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>AI-powered Risk Assessment</h4>
+                        <p>Utilize machine learning models to assess the ESG risk of organizations based on their environmental, social, and governance scores.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Fairness Evaluation</h4>
+                        <p>Compute fairness metrics like Disparate Impact and Statistical Parity Difference to ensure fairness in ESG risk assessments.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Interactive Dashboard</h4>
+                        <p>Visualize predictions and fairness metrics with an easy-to-use Streamlit dashboard.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>FastAPI for Model Deployment</h4>
+                        <p>API endpoints for RF, XGBoost, and Neural Network predictions that can be consumed by any client.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 1.19 -->
+            <div class="project" id="lts1.19">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">1.19</span>
+                        <h2>OSINT-Driven Attribution & Darknet Threat Actor Profiling Pipeline</h2>
+                    </div>
+                    <div></div> <!-- Empty div for alignment -->
+                </div>
+                
+                <p>This project presents the design and phased implementation of an advanced, end-to-end <strong>Open-Source Intelligence (OSINT)—driven threat attribution pipeline</strong> that enables high-confidence identification, profiling, and tracking of cyber threat actors operating across the clear web, deep web, and darknet. The system moves beyond traditional IOC-centric and TTP-only approaches by integrating behavioral, linguistic, economic, and infrastructural signals into a unified intelligence model. Its strategic objective is to deliver <strong>context-rich, attribution-grade intelligence</strong> that answers not only <em>what</em> happened, but <em>who</em> is behind an activity, <em>why</em> they are acting, and <em>how</em> they are likely to evolve.</p>
+                
+                <p>At its core, the pipeline is architected as a <strong>modular five-stage system</strong>: data collection, processing and enrichment, analysis and correlation, profiling and attribution, and dissemination. It begins with large-scale, non-attributable collection of data from darknet markets, underground forums, ransomware leak sites, social media, paste sites, code repositories, and technical intelligence feeds such as malware sandboxes and threat-intelligence platforms. All raw content is preserved for evidentiary integrity, ensuring traceability and analyst validation.</p>
+                
+                <p>Collected data is then normalized, enriched, and transformed into structured intelligence. Advanced parsing and natural-language processing extract key entities such as aliases, PGP keys, cryptocurrency wallets, malware hashes, infrastructure artifacts, and linguistic characteristics. Dedicated enrichment services add contextual intelligence (WHOIS, passive DNS, blockchain analytics, malware analysis, and cross-platform alias discovery), converting fragmented artifacts into analytically valuable objects.</p>
+                
+                <p>The analytical core of the system is a <strong>graph-based correlation engine</strong>, where actors, infrastructure, tools, and behaviors are modeled as interconnected entities. This enables discovery of hidden relationships—shared aliases, reused PGP keys, overlapping infrastructure, or recurring behavioral patterns—that are not visible through linear analysis. Automated malware family clustering using fuzzy hashing, YARA rules, and machine-learning–based similarity analysis further strengthens attribution confidence by linking campaigns and toolchains to specific actors or groups.</p>
+                
+                <p>From this correlated intelligence, the pipeline synthesizes <strong>high-fidelity threat actor profiles</strong>. Each profile combines behavioral fingerprinting (language use, posting cadence, time-zone inference, and operational security habits) with observed TTPs mapped to the MITRE ATT&CK framework. Outputs include confidence-scored analytic judgements, associated infrastructure and financial artifacts, and visual representations aligned with the Diamond Model, supporting both strategic and operational use cases.</p>
+                
+                <p>Crucially, the pipeline is designed for <strong>operational integration</strong>. Intelligence outputs are automatically transformed into STIX 2.1 objects and pushed to platforms such as MISP and OpenCTI, ensuring seamless consumption by SOC, threat-hunting, and incident-response teams. Automated reporting capabilities further enable executive-level briefings and cross-organizational intelligence sharing.</p>
+                
+                <div class="highlight-box">
+                    <h4>Strategic Value</h4>
+                    <p>This project delivers a scalable, legally mindful, and ethically governed attribution framework that bridges OSINT, malware analysis, and behavioral analytics. It enhances national-security and enterprise-defense postures by transforming disparate open-source signals into actionable, attribution-grade cyber threat intelligence—supporting proactive detection, informed response, and long-term adversary understanding.</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Highlighted Projects Portfolio | Last Updated: 2024</p>
+            <p>All projects demonstrate expertise in cybersecurity, threat intelligence, GRC, AI/ML, and risk management.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Highlight current project on scroll
+        const projects = document.querySelectorAll('.project');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.backgroundColor = '#f8fafc';
+                    setTimeout(() => {
+                        entry.target.style.backgroundColor = '';
+                    }, 1000);
+                }
+            });
+        }, observerOptions);
+        
+        projects.forEach(project => {
+            observer.observe(project);
+        });
+    </script>
+</body>
+</html>
