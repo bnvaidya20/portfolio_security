@@ -72,7 +72,7 @@ Feel free to reach out:
 ---
 
 ## Acknowledgement
-I would like to extend my sincere gratitude to **[DesignToCodes](https://www.designtocodes.com)** for providing beautifully designed free HTML templates, which served as the foundation for creating this cybersecurity portfolio.
+ Developed utilizing core design layouts by **[DesignToCodes](https://www.designtocodes.com)**.
 
 
 ## License

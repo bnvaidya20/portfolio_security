@@ -793,12 +793,51 @@
                 <div class="project-header">
                     <div>
                         <span class="project-number">2.8</span>
-                        <h2>EVCS Infrastructure LLM</h2>
+                        <h2>Automated International Research Partner Vetting Assistant</h2>
                     </div>
-                    <a href="https://github.com/bnvaidya20/EVCS_Infrastructure_LLM" class="github-link" target="_blank">View on GitHub</a>
+                    <div></div>
                 </div>
                 
-                <p>This project is designed to determine the electric vehicle charging station (EVCS) infrastructure in Canada using the OpenAI API via the LangChain library. The project consists of multiple steps to identify the province with the most EV public chargers, the number of public EV charging stations in the city within the province with the most EV public chargers, and the detailed breakdown of chargers in that city.</p>
+                <div class="executive-summary">
+                    <h3>Executive Summary</h3>
+                    <p>The Automated International Research Partner Vetting Assistant is an AI-driven, policy-compliant solution designed to streamline and strengthen due diligence for international research collaborations. Built in strict alignment with Canada’s National Security Guidelines for Research Partnerships (NSGRP) and the Security, Threat, and Risk Assessment Criteria (STRAC), the system addresses the growing need for rapid, consistent, and auditable vetting of foreign individuals and institutions—particularly within federally funded or sensitive research contexts.</p>
+                    
+                    <p>The platform replaces slow, manual review processes with an automated, end-to-end workflow orchestrated via N8N and powered by local LLMs (e.g., Ollama-hosted Mistral) through LangChain. Initiated when a researcher submits partner details through a secure form, the system normalizes identities, resolves institutional affiliations, and generates a unique entity ID for full auditability. This architecture ensures data sovereignty by supporting on-premises deployment within Canadian federal or university IT environments.</p>
+                    
+                    <p>The core risk assessment engine operates across three integrated analytical layers, synthesizing structured and unstructured data to surface potential security concerns. By embedding governance directly into the vetting workflow, the solution transforms compliance from a reactive bottleneck into a proactive, strategic enabler.</p>
+                </div>
+                
+                <div class="phase-grid">
+                    <div class="phase-card">
+                        <div class="phase-number">1</div>
+                        <h4>Sanctions & NRO List Screening</h4>
+                        <p>Automatically cross-references partner entities against Canada’s official Named Research Organizations (NRO) list and global sanctions databases to flag prohibited affiliations or restricted collaborations.</p>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">2</div>
+                        <h4>Academic Metadata Analysis</h4>
+                        <p>Scrapes and analyzes publication metadata to detect dual-use technology indicators, military-linked co-author networks, and funding sources that may pose indirect national security risks.</p>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">3</div>
+                        <h4>OSINT & Reputation Profiling</h4>
+                        <p>Leverages open-source intelligence from news, web, and security APIs to identify reputational red flags, geopolitical sensitivities, or emerging threat intelligence associated with the proposed partner.</p>
+                    </div>
+                </div>
+                
+                <p>Findings from these layers are synthesized by an AI agent that applies STRAC-aligned decision logic to categorize each case as <strong>Green (auto-approve)</strong>, <strong>Amber (human review)</strong>, or <strong>Red (block)</strong>. A structured, explainable compliance report is automatically generated, complete with data sources, timestamps, and LLM reasoning traces to ensure full transparency for institutional audits. Results are instantly communicated to researchers and routed to compliance dashboards, while all actions are securely logged in a privacy-preserving database—reducing vetting timelines from days to under 10 minutes.</p>
+                
+                <div class="use-case-box">
+                    <h4>Real-World Use Case: Canadian University & Federal Research Compliance</h4>
+                    <p>Beyond theoretical design, the assistant is deployed directly within <strong>Canadian university and federal research IT environments</strong>. By utilizing on-premises LLMs and localized data pipelines, it satisfies strict data sovereignty and residency mandates while enabling research offices to confidently vet international collaborators across STEM, health, and defense-adjacent disciplines without compromising sensitive institutional data.</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>Strategic Value</h4>
+                    <p>This solution delivers a strategic fusion of workflow automation, AI interpretability, and policy-aware design. It not only mitigates national security risks and ensures rigorous due diligence under NSGRP/STRAC mandates but also empowers research institutions to safely pursue global partnerships—safeguarding Canada’s innovation ecosystem in an era of heightened geopolitical and technological sensitivity.</p>
+                </div>
             </div>
             
             <!-- Project 2.9 -->
@@ -806,54 +845,12 @@
                 <div class="project-header">
                     <div>
                         <span class="project-number">2.9</span>
-                        <h2>Age Bias Detection and Mitigation Strategies for Credit Decision Making</h2>
+                        <h2>EVCS Infrastructure LLM</h2>
                     </div>
-                    <a href="https://github.com/bnvaidya20/bias_mitigation_credit_scores" class="github-link" target="_blank">View on GitHub</a>
+                    <a href="https://github.com/bnvaidya20/EVCS_Infrastructure_LLM" class="github-link" target="_blank">View on GitHub</a>
                 </div>
                 
-                <p>This project focuses on detecting and mitigating age-related bias in credit decision-making using machine learning models. Bias in automated credit scoring can lead to unfair decisions, especially regarding sensitive attributes like age. The goal is to assess and mitigate age bias in predictive models built using the German Credit dataset and improve the fairness of credit decisions across different age groups.</p>
-                
-                <h3>Problem Statement</h3>
-                <ul>
-                    <li>In financial decision-making, such as loan approvals, biased models can negatively impact specific groups of individuals. This project aims to explore how age bias affects credit decision models and implement bias mitigation strategies to promote fairer outcomes. We analyze the disparity between the privileged group (age ≥ 25) and the unprivileged group (age < 25) in the model's decisions.</li>
-                </ul>
-                
-                <h3>Methodology</h3>
-                
-                <div class="phase-grid">
-                    <div class="phase-card">
-                        <div class="phase-number">1</div>
-                        <h4>Bias Detection</h4>
-                        <ul>
-                            <li>We begin by training machine learning models (Logistic Regression and Random Forest) on the dataset without applying any bias mitigation techniques.</li>
-                            <li>Fairness metrics such as Disparate Impact, Average Odds Difference, Equal Opportunity Difference, and Statistical Parity Difference are computed to evaluate the presence of bias based on the protected attribute: Age.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="phase-card">
-                        <div class="phase-number">2</div>
-                        <h4>Bias Mitigation (Reweighing)</h4>
-                        <ul>
-                            <li>After detecting bias, we apply the Reweighing technique (a pre-processing bias mitigation algorithm). This technique adjusts the weights of the training data to balance the outcomes for privileged and unprivileged groups.</li>
-                            <li>We retrain the models using the transformed dataset and reassess bias using the same fairness metrics.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="phase-card">
-                        <div class="phase-number">3</div>
-                        <h4>Model Evaluation</h4>
-                        <ul>
-                            <li>The models are evaluated both for accuracy and fairness. We compare the performance before and after bias mitigation to assess the effectiveness of the reweighing technique.</li>
-                            <li>The fairness metrics are computed on both the original and transformed datasets to measure the change in bias.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <h3>Results</h3>
-                <ul>
-                    <li><strong>Without Bias Mitigation:</strong> Initial analysis shows that the privileged group (age ≥ 25) received more favorable credit outcomes compared to the unprivileged group (age < 25).</li>
-                    <li><strong>With Bias Mitigation (Reweighing):</strong> After applying the reweighing technique, there was a notable improvement in fairness metrics, such as Disparate Impact and Equal Opportunity Difference, while maintaining a comparable level of model accuracy.</li>
-                </ul>
+                <p>This project is designed to determine the electric vehicle charging station (EVCS) infrastructure in Canada using the OpenAI API via the LangChain library. The project consists of multiple steps to identify the province with the most EV public chargers, the number of public EV charging stations in the city within the province with the most EV public chargers, and the detailed breakdown of chargers in that city.</p>
             </div>
             
             <!-- Project 2.10 -->
@@ -907,6 +904,162 @@
                 <div class="highlight-box">
                     <h4>Strategic Value</h4>
                     <p>This project delivers a practical blueprint for adversarially robust IDS design, combining empirical rigor with deployable defenses. It aligns with emerging research-security and critical-infrastructure protection priorities by explicitly addressing adversarial AI risks in cyber-physical and energy–mobility systems.</p>
+                </div>
+            </div>
+
+            <!-- Project 2.11 -->
+            <div class="project" id="vcr2.11">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">2.11</span>
+                        <h2>AI-Enabled Cybersecurity Approaches for Resilient V2G Infrastructure</h2>
+                    </div>
+                    <div></div>
+                </div>
+                
+                <div class="executive-summary">
+                    <h3>Executive Summary</h3>
+                    <p>Vehicle-to-Grid (V2G) integration introduces bidirectional cyber-physical attack surfaces absent in conventional unidirectional charging. Unlike standard EV charging, compromised V2G systems can destabilize grid frequency through coordinated false discharge, cause financial harm via energy theft, and severely compromise user privacy. Current cybersecurity frameworks exhibit critical capability gaps: detection latency mismatches (5–30 seconds vs. the <500ms required for frequency response), single-layer monitoring vulnerable to cross-layer evasion, manual response times exceeding 15 minutes, and inherent privacy-utility conflicts that often violate GDPR standards.</p>
+                    
+                    <p>To address these vulnerabilities, this paper presents a <strong>Dual-Plane Resilient Framework</strong> built on four core architectural principles: strict separation of real-time inference from privacy-preserving training, data minimization where raw telemetry never leaves Tier 1, defense-in-depth with independent detection at each tier, and formal verification of all autonomous response actions. The system is structured across three hierarchical tiers, each optimized for specific operational constraints and threat profiles.</p>
+                    
+                    <p>By decoupling model training from real-time inference, the framework ensures sub-500ms protective performance without compromising sensitive fleet data. This edge-native design directly mitigates the latency, privacy, and coordination vulnerabilities that plague traditional cloud-centric V2G security models.</p>
+                </div>
+                
+                <div class="phase-grid">
+                    <div class="phase-card">
+                        <div class="phase-number">1</div>
+                        <h4>Tier 1: Edge/EVSE Detection</h4>
+                        <p>Employs a Lightweight Statistical Anomaly Detector (LSAD) using Half-Space Trees, optimized for ARM Cortex-M7 processors with NEON SIMD. Achieves 7.18ms inference latency and a 287KB memory footprint, detecting ISO 15118 tampering and OCPP DoS attacks with 93.2% recall.</p>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">2</div>
+                        <h4>Tier 2: Building/BEMS Correlation</h4>
+                        <p>Utilizes a Graph-Temporal Autoencoder (GTA) for cross-charger correlation. KD-tree indexing reduces complexity to O(N log N), cutting graph construction to 11.8ms and meeting the <500ms latency target while enforcing local differential privacy (ε=0.4).</p>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">3</div>
+                        <h4>Tier 3: Aggregator/Cloud Orchestration</h4>
+                        <p>Implements a GNN-Augmented Cascading Ensemble scaling to 10,000 EVs via sparse adjacency matrices and INT8 inference. Integrates Byzantine-resilient Federated Learning and formal safety invariants (FVARS) to guarantee mitigation actions never disconnect >5% of fleet capacity.</p>
+                    </div>
+                </div>
+                
+                <p>Privacy and operational safety are rigorously enforced throughout the pipeline. A Byzantine-resilient Federated Learning plane ensures model updates occur without exposing raw telemetry, maintaining membership inference attack success rates near random guessing (≤55%). To accelerate operator triage, a Counterfactual Explanation System maps anomalies to physical root causes, targeting validation times under 60 seconds. Crucially, the Formally Verified Autonomous Response System (FVARS) applies Linear Temporal Logic safety invariants, model-checking response policies to prevent mitigation-induced grid instability while adapting to concept drift from fleet evolution.</p>
+                
+                <div class="use-case-box">
+                    <h4>Real-World Use Case: Grid Simulation & Attack Validation</h4>
+                    <p>Beyond theoretical modeling, the framework is validated through integrated simulations using <strong>GridLAB-D on IEEE 123-node feeders</strong>, custom Python simulators for EV trajectories, and Cooja/Contiki-NG for cyber attacks mapped to the MITRE ATLAS framework. Attack injection scenarios—spanning protocol-level tampering to coordinated demand response manipulation—demonstrate the system's operational superiority in realistic smart grid environments.</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>Strategic Value</h4>
+                    <p>This work establishes a new paradigm for edge-native V2G security, shifting from vulnerable cloud-dependent architectures to a hierarchical, resilient framework. By delivering 3.1x faster baseline detection and reducing false positives by 4.6x during critical grid events, the system provides a deployable blueprint for safeguarding energy-mobility infrastructure against sophisticated cyber-physical threats while maintaining strict data privacy and regulatory compliance.</p>
+                </div>
+            </div>
+    
+            <!-- Project 2.12 -->
+            <div class="project" id="vcr2.12">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">2.12</span>
+                        <h2>AI-Driven Hierarchical Ensemble Framework For ICS Protocol Anomaly Detection</h2>
+                    </div>
+                    <div></div>
+                </div>
+                
+                <div class="executive-summary">
+                    <h3>Executive Summary</h3>
+                    <p>Industrial Control Systems (ICS) underpin critical infrastructure—power grids, water treatment facilities, and oil and gas operations—where operational availability and physical safety inherently outweigh traditional IT security priorities. Legacy protocols such as MODBUS/TCP, DNP3, and IEC 60870-5-104 lack native authentication or encryption, while field devices frequently run unpatchable, decades-old firmware. Conventional intrusion detection systems and supervised machine learning models fail in this constrained environment due to their reliance on massive labeled datasets, high computational overhead, and inability to meet strict inline deployment requirements (&lt;10 ms latency, &lt;256 MB memory, and near-zero false-positive tolerance).</p>
+                    
+                    <p>To bridge this academic-operational gap, <strong>SSL-TRIDENT</strong> introduces a semi/self-supervised hierarchical ensemble framework purpose-built for operational technology (OT) environments. The architecture replaces label-intensive supervised tiers with three optimized components: a self-supervised contrastive encoder that learns robust representations of normal traffic without attack labels, a positive-unlabeled (PU) binary classifier requiring only 10–100 confirmed attacks to refine detection boundaries, and a lightweight anomaly signature matcher for protocol-rule validation. A calibrated probabilistic four-case fusion matrix unifies these outputs, explicitly preserving inter-level disagreement as actionable zero-day signal rather than forcing uncertain predictions into false negatives.</p>
+                    
+                    <p>SSL-TRIDENT operates in two deployment-optimized modes via configuration-driven adaptation. Inline mode enforces real-time protection guarantees through int8 quantization (74% memory reduction), cascade early-exit scheduling (resolving 92–95% of traffic at Level 1 in &lt;3.7 ms), and real-time Linux scheduling for predictable p99 latency. Passive mode prioritizes forensic accuracy via micro-batching and model distillation for edge-constrained gateways. Both modes share a protocol-agnostic feature abstraction, enabling seamless cross-protocol transfer with minimal reconfiguration.</p>
+                </div>
+                
+                <div class="phase-grid">
+                    <div class="phase-card">
+                        <div class="phase-number">1</div>
+                        <h4>Self-Supervised Contrastive Encoding</h4>
+                        <p>Operates as the foundational detection layer, learning robust representations of normal operational traffic using zero attack labels. Optimized for cascade early-exit scheduling, it efficiently filters baseline traffic while establishing a computationally lightweight anomaly baseline.</p>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">2</div>
+                        <h4>Positive-Unlabeled (PU) Classification</h4>
+                        <p>Serves as the refinement tier, requiring only 10–100 confirmed attack samples to calibrate detection boundaries. Online PU updates triggered by validated positives maintain F1 >0.94 across simulated concept drift without requiring full model retraining.</p>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">3</div>
+                        <h4>Anomaly Signature Matching & Fusion</h4>
+                        <p>Functions as the final validation layer for protocol-rule verification. Integrates with a calibrated probabilistic fusion matrix to preserve inter-level disagreement, transforming model uncertainty into actionable zero-day threat intelligence.</p>
+                    </div>
+                </div>
+                
+                <p>Evaluated on the CIC Modbus 2023 dataset using Leave-One-Attack-Family-Out (LOAFO) zero-day simulation, SSL-TRIDENT achieves F1 scores of 0.94–0.96, false-positive rates ≤0.010, and zero-day recall ≥70%—recovering 94% of fully supervised baseline performance while utilizing 99.8% fewer training labels. Operational resilience is maintained through Maximum Mean Discrepancy (MMD) detection, which schedules encoder fine-tuning during low-traffic windows, alongside a structured three-month deployment roadmap that transitions sites from passive baseline monitoring to inline production protection.</p>
+                
+                <div class="use-case-box">
+                    <h4>Real-World Use Case: Critical Infrastructure Operations & Encrypted Traffic Fallback</h4>
+                    <p>Beyond synthetic benchmarks, the framework is engineered for <strong>real-world OT deployment across energy, water, and industrial sectors</strong>. It strictly aligns with IEC 61508 safety principles by guaranteeing security instrumentation never compromises process availability. Even when facing encrypted network traffic, metadata-only feature abstraction sustains robust detection (F1=0.78–0.84), with optional decryption seamlessly restoring full performance—ensuring continuous protection during network modernization or constrained states.</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>Strategic Value</h4>
+                    <p>SSL-TRIDENT eliminates prohibitive data labeling costs and enables immediate security posture improvement without requiring legacy infrastructure upgrades. By guaranteeing near-zero false positives to prevent operator alert fatigue and calibrating uncertainty handling to escalate rather than discard novel threats, it establishes a new operational standard for critical infrastructure defense. Future development will prioritize adversarial hardening, federated cross-facility learning, formal SIL-2 safety certification, and live industrial testbed validation.</p>
+                </div>
+            </div>
+        
+            <!-- Project 2.13 -->            
+            <div class="project" id="vcr2.13">
+                <div class="project-header">
+                    <div>
+                        <span class="project-number">2.13</span>
+                        <h2>AI/ML-Powered Unified Cybersecurity Maturity Assessment Framework for Industrial Control Systems</h2>
+                    </div>
+                    <div></div>
+                </div>
+                
+                <div class="executive-summary">
+                    <h3>Executive Summary</h3>
+                    <p>PROMETHEUS (Predictive Risk-Oriented Maturity Evaluation Through Hybrid Embedded Unified Scoring) is a novel AI/ML-powered framework designed to transform Industrial Control Systems (ICS) cybersecurity maturity assessment from a static, subjective, periodic audit into a continuous, data-driven, predictive, and self-calibrating intelligence system. Developed in response to critical gaps identified in petrochemical facility assessments, it addresses the severe limitations of traditional questionnaire-based approaches that produce point-in-time snapshots lacking predictive capability, automated data ingestion, or adaptive learning.</p>
+                    
+                    <p>The framework integrates heterogeneous data sources—including network telemetry, asset inventories, configuration states, vulnerability feeds, access logs, and threat intelligence—through a sophisticated five-layer architecture. <strong>Layer 1</strong> employs multi-modal data ingestion and temporal knowledge graph construction, automatically degrading maturity scores for unvalidated controls to solve the "snapshot decay" problem. <strong>Layer 2</strong> applies advanced representation learning, utilizing a Temporal Graph Attention Network (T-GAT) to capture control interdependencies, a Variational Autoencoder (VAE) for continuous OT traffic anomaly monitoring, and a domain-specific Large Language Model for automated policy compliance analysis.</p>
+                    
+                    <p><strong>Layers 3 through 5</strong> drive actionable intelligence and continuous improvement. The Maturity Scoring Engine replaces fixed arithmetic with adaptive, multi-objective meta-learning and Bayesian uncertainty quantification, projecting future maturity trajectories via Temporal Convolutional Networks. A Reinforcement Learning optimizer sequences remediation controls to maximize risk reduction within budget and operational constraints. The system closes the loop through active learning—reducing survey burden by 60–80%—and federated learning for privacy-preserving cross-site benchmarking, ensuring models continuously recalibrate to emerging threats.</p>
+                </div>
+                
+                <div class="phase-grid">
+                    <div class="phase-card">
+                        <div class="phase-number">1</div>
+                        <h4>Temporal Knowledge Graph & Representation Learning</h4>
+                        <p>Constructs dynamic relational graphs of assets, policies, and vulnerabilities while applying T-GAT encoders and VAEs to capture cascading control effects and continuous behavioral anomalies in OT environments.</p>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">2</div>
+                        <h4>Adaptive Scoring & Predictive Trajectories</h4>
+                        <p>Replaces static aggregation with meta-learning weight adjustments and hierarchical attention networks. Projects maturity trajectories forward using TCNs, accompanied by calibrated Bayesian confidence intervals for risk-aware planning.</p>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">3</div>
+                        <h4>RL-Optimized Remediation & Continuous Feedback</h4>
+                        <p>Deploys reinforcement learning to sequence security interventions for maximum ROI, integrated with active learning and federated benchmarking to sustain model accuracy while drastically reducing manual assessment overhead.</p>
+                    </div>
+                </div>
+                
+                <p>PROMETHEUS delivers ten novel contributions over current methodologies, including empirically learned adaptive weighting, LLM-powered policy gap analysis, and privacy-preserving cross-facility learning. Validation targets demonstrate high fidelity, achieving Pearson correlation >0.85 against expert assessments, predictive RMSE <5%, and ≥60% reduction in assessment effort. The framework is technically feasible with current ML capabilities, deployable within strict OT operational constraints, and explicitly validated through A/B testing of RL-recommended interventions.</p>
+                
+                <div class="use-case-box">
+                    <h4>Real-World Use Case: Petrochemical Facility Deployment & SaaS Commercialization</h4>
+                    <p>Beyond algorithmic validation, PROMETHEUS is engineered for <strong>direct enterprise deployment across critical industrial sectors</strong>. The commercialization pathway targets a tiered SaaS model ($15K–$80K/site/year), with initial rollout in South African petrochemical facilities and strategic integrations with OT OEMs and consulting firms. Risk mitigation strategies—including on-premise ML processing, human-in-the-loop validation for safety-critical outputs, and passive data collection—ensure seamless compatibility with legacy ICS environments.</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>Strategic Value</h4>
+                    <p>PROMETHEUS represents a paradigm shift in ICS cybersecurity maturity assessment, unifying temporal graph neural networks, variational autoencoders, domain-adapted LLMs, and reinforcement learning into a single, cohesive architecture. By delivering dynamic, objective, and explainable maturity intelligence, it eliminates assessment fatigue and provides actionable, investment-optimized roadmaps—positioning itself as a foundational reference implementation for emerging global critical infrastructure cybersecurity regulations.</p>
                 </div>
             </div>
         </div>
